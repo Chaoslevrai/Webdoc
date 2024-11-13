@@ -13,19 +13,14 @@
 	text-align: center;
 }
 
-/* Tailles de police responsive */
+/* Typographie responsive */
 h1 {
-	font-size: 5vw; /* Adaptatif par rapport à la largeur de l’écran */
+	font-size: 5vw;
 	padding: 0;
 	margin: 0;
 }
-p {
+p, h3 {
 	font-size: 1vw;
-	margin: 0;
-	padding: 0;
-}
-h3 {
-	font-size: 1.8vw;
 	margin: 0;
 	padding: 0;
 }
@@ -39,12 +34,8 @@ h3 {
 }
 
 @keyframes moveUpDown {
-	from {
-		top: 80%;
-	}
-	to {
-		top: 85%;
-	}
+	from { top: 80%; }
+	to { top: 85%; }
 }
 
 /* Section avec positionnement relatif */
@@ -52,262 +43,143 @@ h3 {
 	position: relative;
 }
 
-/* Style responsive pour les "chapitres" */
-.chapitre1,
-.chapitre2,
-.chapitre3,
-.quizz,
-.chapitre4 {
+/* Styles pour les "chapitres" et textes internes */
+.chapitre1, .chapitre2, .chapitre3, .quizz, .chapitre4 {
 	position: absolute;
 	background-color: #ffffff;
 	color: #000000;
 	border-radius: 50%;
-	width: 20vw; /* Largeur et hauteur adaptatives */
+	width: 20vw;
 	height: 20vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
 	font-size: 1.5vw;
+	flex-direction: column;
+	text-align: center;
+	gap: 0.2vh;
 }
 
-/* Positions adaptatives en vh et vw */
-.chapitre1 {
-	top: 10vh;
-	left: 5vw;
+/* Textes internes */
+.chapitre1 h1, .chapitre2 h1, .chapitre3 h1, .chapitre4 h1, .quizz h1 {
+	font-size: 1.7em; /* Ajusté pour les titres de chapitres */
+	margin: 0;
 }
-.chapitre2 {
-	top: 30vh;
-	left: 40vw;
+.historique {
+	font-size: 0.8em; /* Style pour le texte "Historique" */
 }
-.chapitre3 {
-	top: 5vh;
-	left: 70vw;
-}
-.quizz {
-	top: 60vh;
-	left: 10vw;
-}
-.chapitre4 {
-	top: 55vh;
-	left: 70vw;
+.auteur {
+	font-size: 0.6em; /* Style pour le texte de l’auteur */
+	color: #555555; /* Couleur plus sombre pour contraste */
 }
 
-/* Media queries pour tablettes et mobiles */
+/* Positionnement adaptatif */
+.chapitre1 { top: 10vh; left: 5vw; }
+.chapitre2 { top: 30vh; left: 40vw; }
+.chapitre3 { top: 5vh; left: 70vw; }
+.quizz { top: 60vh; left: 10vw; }
+.chapitre4 { top: 55vh; left: 70vw; }
+
+/* Styles adaptatifs pour écrans moyens */
 @media (max-width: 1024px) {
-	h1 {
-		font-size: 10vw;
-	}
-	p,
-	h3 {
-		font-size: 4vw;
-	}
+	h1 { font-size: 10vw; }
+	p, h3 { font-size: 4vw; }
 
-	.chapitre1,
-	.chapitre2,
-	.chapitre3,
-	.quizz,
-	.chapitre4 {
+	.chapitre1, .chapitre2, .chapitre3, .quizz, .chapitre4 {
 		width: 25vw;
 		height: 25vw;
 		font-size: 2.5vw;
 	}
 
-	.chapitre1 {
-		top: 12vh;
-		left: 5vw;
+	.chapitre1 h1, .chapitre2 h1, .chapitre3 h1, .chapitre4 h1, .quizz h1 {
+		font-size: 4vw;
 	}
-	.chapitre2 {
-		top: 35vh;
-		left: 25vw;
-	}
-	.chapitre3 {
-		top: 8vh;
-		left: 60vw;
-	}
-	.quizz {
-		top: 65vh;
-		left: 10vw;
-	}
-	.chapitre4 {
-		top: 55vh;
-		left: 60vw;
-	}
+	.historique { font-size: 1.2vw; }
+	.auteur { font-size: 1vw; }
+
+	.chapitre1 { top: 12vh; left: 5vw; }
+	.chapitre2 { top: 35vh; left: 25vw; }
+	.chapitre3 { top: 8vh; left: 60vw; }
+	.quizz { top: 65vh; left: 10vw; }
+	.chapitre4 { top: 55vh; left: 60vw; }
 }
 
+/* Styles adaptatifs pour petits écrans */
 @media (max-width: 768px) {
-	h1 {
-		font-size: 12vw;
-	}
-	p,
-	h3 {
-		font-size: 5vw;
-	}
+	h1 { font-size: 12vw; }
+	p, h3 { font-size: 5vw; }
 
-	.chapitre1,
-	.chapitre2,
-	.chapitre3,
-	.quizz,
-	.chapitre4 {
+	.chapitre1, .chapitre2, .chapitre3, .quizz, .chapitre4 {
 		width: 30vw;
 		height: 30vw;
 		font-size: 3vw;
 	}
 
-	.chapitre1 {
-		top: 15vh;
-		left: 5vw;
+	.chapitre1 h1, .chapitre2 h1, .chapitre3 h1, .chapitre4 h1, .quizz h1 {
+		font-size: 5vw;
 	}
-	.chapitre2 {
-		top: 45vh;
-		left: 20vw;
-	}
-	.chapitre3 {
-		top: 10vh;
-		left: 50vw;
-	}
-	.quizz {
-		top: 75vh;
-		left: 5vw;
-	}
-	.chapitre4 {
-		top: 65vh;
-		left: 50vw;
-	}
+	.historique { font-size: 2.5vw; }
+	.auteur { font-size: 1.8vw; }
+
+	.chapitre1 { top: 15vh; left: 5vw; }
+	.chapitre2 { top: 45vh; left: 20vw; }
+	.chapitre3 { top: 10vh; left: 50vw; }
+	.quizz { top: 75vh; left: 5vw; }
+	.chapitre4 { top: 65vh; left: 50vw; }
 }
 
+/* Styles pour très petits écrans */
 @media (max-width: 480px) {
-	h1 {
-		font-size: 14vw;
-	}
-	p,
-	h3 {
-		font-size: 6vw;
-	}
+	h1 { font-size: 14vw; }
+	p, h3 { font-size: 6vw; }
 
-	.chapitre1,
-	.chapitre2,
-	.chapitre3,
-	.quizz,
-	.chapitre4 {
+	.chapitre1, .chapitre2, .chapitre3, .quizz, .chapitre4 {
 		width: 35vw;
 		height: 35vw;
 		font-size: 4vw;
 	}
 
-	.chapitre1 {
-		top: 20vh;
-		left: 5vw;
+	.chapitre1 h1, .chapitre2 h1, .chapitre3 h1, .chapitre4 h1, .quizz h1 {
+		font-size: 6vw;
 	}
-	.chapitre2 {
-		top: 55vh;
-		left: 15vw;
-	}
-	.chapitre3 {
-		top: 15vh;
-		left: 45vw;
-	}
-	.quizz {
-		top: 80vh;
-		left: 5vw;
-	}
-	.chapitre4 {
-		top: 70vh;
-		left: 45vw;
-	}
-}
-.chapitre1,
-.chapitre2,
-.chapitre3,
-.quizz,
-.chapitre4 {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 0.2vh; /* Espace entre les éléments */
+	.historique { font-size: 3vw; }
+	.auteur { font-size: 2.5vw; }
+
+	.chapitre1 { top: 20vh; left: 5vw; }
+	.chapitre2 { top: 55vh; left: 15vw; }
+	.chapitre3 { top: 15vh; left: 45vw; }
+	.quizz { top: 80vh; left: 5vw; }
+	.chapitre4 { top: 70vh; left: 45vw; }
 }
 
-/* Espace entre les paragraphes */
-.chapitre1,
-.chapitre2,
-.chapitre3,
-.chapitre4,
-.quizz,
-p {
-	margin: 1vh 0; /* Marges verticales pour espacer les paragraphes */
-}
-
-/* Taille du h1 */
-.chapitre1,
-.chapitre2,
-.chapitre3,
-.chapitre4,
-.quizz,
-h1 {
-	font-size: 1.7em; /* Taille de police pour le titre "Chapitre 1" */
-}
-
-/* Modifier la taille de la police de chaque paragraphe */
-.chapitre1,
-.chapitre2,
-.chapitre3,
-.chapitre4,
-.quizz,
-.historique {
-	font-size: 0.8em; /* Taille de police pour "L'Historique" */
-}
-
-.chapitre1,
-.chapitre2,
-.chapitre3,
-.chapitre4,
-.quizz,
-.auteur {
-	font-size: 0.6em; /* Taille de police pour "Redigé par : Youness" */
-}
-
-/* Pour rendre le texte responsive */
-@media (max-width: 1024px) {
-	.chapitre1 h1 {
-		font-size: 4vw; /* Taille responsive pour le titre sur les écrans plus petits */
-	}
-
-	.chapitre1 .historique {
-		font-size: 1.2vw; /* Taille de police ajustée pour les écrans plus petits */
-	}
-
-	.chapitre1 .auteur {
-		font-size: 1.8vw;
-	}
-}
-
-@media (max-width: 768px) {
-	.chapitre1 h1 {
-		font-size: 6vw; /* Taille encore plus petite pour le titre sur les très petits écrans */
-	}
-
-	.chapitre1 .historique {
-		font-size: 3vw; /* Encore plus petit sur les très petits écrans */
-	}
-
-	.chapitre1 .auteur {
-		font-size: 2.5vw;
-	}
-}
-.btn {
+/* Style pour les boutons */
+.introchap {
 	background-color: #7d9cde;
 	border-radius: 50%;
-	width: 70px; /* Largeur et hauteur fixe */
-	height: 70px;
+	width: 3vw;
+	height: 3vw;
+	top: 27vh ;
 	display: flex;
+	position: absolute;
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
 	font-size: 1.5vw;
 }
-.introchap {
-	position: absolute;
-	top: 269px;
-	left: 155px;
+
+@media (max-width: 480px) {
+	.introchap {
+		width: 20vw;
+		height: 20vw;
+		top: 20vh ;
+	}
+}
+
+/* Espacement entre les éléments */
+.chapitre1, .chapitre2, .chapitre3, .quizz, .chapitre4 {
+	margin: 1vh 0; /* Espacement vertical */
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
