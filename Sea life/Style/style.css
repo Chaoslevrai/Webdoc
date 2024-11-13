@@ -1,0 +1,38 @@
+@font-face {
+	font-family: "Yang Bagus";
+	src: url("../src/font/Yang-Bagus.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Yang Bagus";
+	text-align: center;
+}
+.section-wrapper {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.section {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 2em;
+	padding: 20px;
+}
+
+/* Different background colors for each section */
+#section1 {
+	background-color: #7d9cde;
+}
+
+#section2 {
+	background-color: #7d9cde;
+}
