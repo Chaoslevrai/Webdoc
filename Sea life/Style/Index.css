@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 /* Style général */
 .titre {
 	font-family: "Yang Bagus", sans-serif;
@@ -34,8 +37,14 @@ p, h3 {
 }
 
 @keyframes moveUpDown {
-	from { top: 80%; }
-	to { top: 85%; }
+    0% {
+        top: 80%;
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        top: 85%;
+        transform: translateX(-50%) rotate(10deg);
+    }
 }
 
 /* Section avec positionnement relatif */
@@ -54,7 +63,6 @@ p, h3 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	cursor: pointer;
 	font-size: 1.5vw;
 	flex-direction: column;
 	text-align: center;
@@ -182,4 +190,40 @@ p, h3 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+
+.piedmehdi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.chargement {
+    width: 100%;
+    height: 15px;
+    background-color: #ffffff00;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+}
+
+.guerriervoire {
+    width: 0%; /* Start with 0% and increase with JavaScript */
+    height: 100%;
+    background-color: #ffffff;
+    transition: width 0.1s ease;
+}
+
+@keyframes fill {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.chapitre1:hover, .chapitre2:hover, .chapitre3:hover, .chapitre4:hover, .quizz:hover, .introchap:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

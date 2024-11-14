@@ -1,3 +1,7 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 @font-face {
 	font-family: "Yang Bagus";
 	src: url("../src/font/Yang-Bagus.woff") format("woff");
@@ -26,13 +30,13 @@ body {
 	color: white;
 	font-size: 2em;
 	padding: 20px;
+	
 }
 
 /* Different background colors for each section */
-#section1 {
-	background-color: #7d9cde;
+#section1, #section2 {
+    background-color: #7d9cde;
 }
-
-#section2 {
-	background-color: #7d9cde;
+html {
+    scroll-behavior: smooth;
 }
