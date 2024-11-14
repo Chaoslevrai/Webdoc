@@ -1,5 +1,5 @@
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 /* Style général */
 .titre {
@@ -22,7 +22,8 @@ h1 {
 	padding: 0;
 	margin: 0;
 }
-p, h3 {
+p,
+h3 {
 	font-size: 1vw;
 	margin: 0;
 	padding: 0;
@@ -37,14 +38,14 @@ p, h3 {
 }
 
 @keyframes moveUpDown {
-    0% {
-        top: 80%;
-        transform: translateX(-50%) rotate(0deg);
-    }
-    100% {
-        top: 85%;
-        transform: translateX(-50%) rotate(10deg);
-    }
+	0% {
+		top: 80%;
+		transform: translateX(-50%) rotate(0deg);
+	}
+	100% {
+		top: 85%;
+		transform: translateX(-50%) rotate(10deg);
+	}
 }
 
 /* Section avec positionnement relatif */
@@ -53,7 +54,11 @@ p, h3 {
 }
 
 /* Styles pour les "chapitres" et textes internes */
-.chapitre1, .chapitre2, .chapitre3, .quizz, .chapitre4 {
+.chapitre1,
+.chapitre2,
+.chapitre3,
+.quizz,
+.chapitre4 {
 	position: absolute;
 	background-color: #ffffff;
 	color: #000000;
@@ -70,7 +75,11 @@ p, h3 {
 }
 
 /* Textes internes */
-.chapitre1 h1, .chapitre2 h1, .chapitre3 h1, .chapitre4 h1, .quizz h1 {
+.chapitre1 h1,
+.chapitre2 h1,
+.chapitre3 h1,
+.chapitre4 h1,
+.quizz h1 {
 	font-size: 1.7em; /* Ajusté pour les titres de chapitres */
 	margin: 0;
 }
@@ -83,82 +92,193 @@ p, h3 {
 }
 
 /* Positionnement adaptatif */
-.chapitre1 { top: 10vh; left: 5vw; }
-.chapitre2 { top: 30vh; left: 40vw; }
-.chapitre3 { top: 5vh; left: 70vw; }
-.quizz { top: 60vh; left: 10vw; }
-.chapitre4 { top: 55vh; left: 70vw; }
+.chapitre1 {
+	top: 10vh;
+	left: 5vw;
+}
+.chapitre2 {
+	top: 30vh;
+	left: 40vw;
+}
+.chapitre3 {
+	top: 5vh;
+	left: 70vw;
+}
+.quizz {
+	top: 60vh;
+	left: 10vw;
+}
+.chapitre4 {
+	top: 55vh;
+	left: 70vw;
+}
 
 /* Styles adaptatifs pour écrans moyens */
 @media (max-width: 1024px) {
-	h1 { font-size: 10vw; }
-	p, h3 { font-size: 4vw; }
+	h1 {
+		font-size: 10vw;
+	}
+	p,
+	h3 {
+		font-size: 4vw;
+	}
 
-	.chapitre1, .chapitre2, .chapitre3, .quizz, .chapitre4 {
+	.chapitre1,
+	.chapitre2,
+	.chapitre3,
+	.quizz,
+	.chapitre4 {
 		width: 25vw;
 		height: 25vw;
 		font-size: 2.5vw;
 	}
 
-	.chapitre1 h1, .chapitre2 h1, .chapitre3 h1, .chapitre4 h1, .quizz h1 {
+	.chapitre1 h1,
+	.chapitre2 h1,
+	.chapitre3 h1,
+	.chapitre4 h1,
+	.quizz h1 {
 		font-size: 4vw;
 	}
-	.historique { font-size: 1.2vw; }
-	.auteur { font-size: 1vw; }
+	.historique {
+		font-size: 1.2vw;
+	}
+	.auteur {
+		font-size: 1vw;
+	}
 
-	.chapitre1 { top: 12vh; left: 5vw; }
-	.chapitre2 { top: 35vh; left: 25vw; }
-	.chapitre3 { top: 8vh; left: 60vw; }
-	.quizz { top: 65vh; left: 10vw; }
-	.chapitre4 { top: 55vh; left: 60vw; }
+	.chapitre1 {
+		top: 12vh;
+		left: 5vw;
+	}
+	.chapitre2 {
+		top: 35vh;
+		left: 25vw;
+	}
+	.chapitre3 {
+		top: 8vh;
+		left: 60vw;
+	}
+	.quizz {
+		top: 65vh;
+		left: 10vw;
+	}
+	.chapitre4 {
+		top: 55vh;
+		left: 60vw;
+	}
 }
 
 /* Styles adaptatifs pour petits écrans */
 @media (max-width: 768px) {
-	h1 { font-size: 12vw; }
-	p, h3 { font-size: 5vw; }
+	h1 {
+		font-size: 12vw;
+	}
+	p,
+	h3 {
+		font-size: 5vw;
+	}
 
-	.chapitre1, .chapitre2, .chapitre3, .quizz, .chapitre4 {
+	.chapitre1,
+	.chapitre2,
+	.chapitre3,
+	.quizz,
+	.chapitre4 {
 		width: 30vw;
 		height: 30vw;
 		font-size: 3vw;
 	}
 
-	.chapitre1 h1, .chapitre2 h1, .chapitre3 h1, .chapitre4 h1, .quizz h1 {
+	.chapitre1 h1,
+	.chapitre2 h1,
+	.chapitre3 h1,
+	.chapitre4 h1,
+	.quizz h1 {
 		font-size: 5vw;
 	}
-	.historique { font-size: 2.5vw; }
-	.auteur { font-size: 1.8vw; }
+	.historique {
+		font-size: 2.5vw;
+	}
+	.auteur {
+		font-size: 1.8vw;
+	}
 
-	.chapitre1 { top: 15vh; left: 5vw; }
-	.chapitre2 { top: 45vh; left: 20vw; }
-	.chapitre3 { top: 10vh; left: 50vw; }
-	.quizz { top: 75vh; left: 5vw; }
-	.chapitre4 { top: 65vh; left: 50vw; }
+	.chapitre1 {
+		top: 15vh;
+		left: 5vw;
+	}
+	.chapitre2 {
+		top: 45vh;
+		left: 20vw;
+	}
+	.chapitre3 {
+		top: 10vh;
+		left: 50vw;
+	}
+	.quizz {
+		top: 75vh;
+		left: 5vw;
+	}
+	.chapitre4 {
+		top: 65vh;
+		left: 50vw;
+	}
 }
 
 /* Styles pour très petits écrans */
 @media (max-width: 480px) {
-	h1 { font-size: 14vw; }
-	p, h3 { font-size: 6vw; }
+	h1 {
+		font-size: 14vw;
+	}
+	p,
+	h3 {
+		font-size: 6vw;
+	}
 
-	.chapitre1, .chapitre2, .chapitre3, .quizz, .chapitre4 {
+	.chapitre1,
+	.chapitre2,
+	.chapitre3,
+	.quizz,
+	.chapitre4 {
 		width: 35vw;
 		height: 35vw;
 		font-size: 4vw;
 	}
 
-	.chapitre1 h1, .chapitre2 h1, .chapitre3 h1, .chapitre4 h1, .quizz h1 {
+	.chapitre1 h1,
+	.chapitre2 h1,
+	.chapitre3 h1,
+	.chapitre4 h1,
+	.quizz h1 {
 		font-size: 6vw;
 	}
-	.historique { font-size: 3vw; }
-	.auteur { font-size: 2.5vw; }
+	.historique {
+		font-size: 3vw;
+	}
+	.auteur {
+		font-size: 2.5vw;
+	}
 
-	.chapitre1 { top: 20vh; left: 5vw; }
-	.chapitre2 { top: 55vh; left: 15vw; }
-	.chapitre3 { top: 15vh; left: 45vw; }
-	.quizz { top: 80vh; left: 5vw; }
-	.chapitre4 { top: 70vh; left: 45vw; }
+	.chapitre1 {
+		top: 20vh;
+		left: 5vw;
+	}
+	.chapitre2 {
+		top: 55vh;
+		left: 15vw;
+	}
+	.chapitre3 {
+		top: 15vh;
+		left: 45vw;
+	}
+	.quizz {
+		top: 80vh;
+		left: 5vw;
+	}
+	.chapitre4 {
+		top: 70vh;
+		left: 45vw;
+	}
 }
 
 /* Style pour les boutons */
@@ -167,7 +287,7 @@ p, h3 {
 	border-radius: 50%;
 	width: 3vw;
 	height: 3vw;
-	top: 27vh ;
+	top: 27vh;
 	display: flex;
 	position: absolute;
 	align-items: center;
@@ -180,50 +300,95 @@ p, h3 {
 	.introchap {
 		width: 20vw;
 		height: 20vw;
-		top: 20vh ;
+		top: 20vh;
 	}
 }
 
 /* Espacement entre les éléments */
-.chapitre1, .chapitre2, .chapitre3, .quizz, .chapitre4 {
+.chapitre1,
+.chapitre2,
+.chapitre3,
+.quizz,
+.chapitre4 {
 	margin: 1vh 0; /* Espacement vertical */
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
-
 .piedmehdi {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
 .chargement {
-    width: 100%;
-    height: 15px;
-    background-color: #ffffff00;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
+	width: 100%;
+	height: 15px;
+	background-color: #ffffff00;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
 }
 
 .guerriervoire {
-    width: 0%; /* Start with 0% and increase with JavaScript */
-    height: 100%;
-    background-color: #ffffff;
-    transition: width 0.1s ease;
+	width: 0%; /* Start with 0% and increase with JavaScript */
+	height: 100%;
+	background-color: #ffffff;
+	transition: width 0.1s ease;
 }
 
 @keyframes fill {
-    0% { width: 0; }
-    100% { width: 100%; }
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
 }
 
-.chapitre1:hover, .chapitre2:hover, .chapitre3:hover, .chapitre4:hover, .quizz:hover, .introchap:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.chapitre1:hover,
+.chapitre2:hover,
+.chapitre3:hover,
+.chapitre4:hover,
+.quizz:hover,
+.introchap:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sound_on {
+	cursor: pointer;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 9999;
+	width: 40px;
+	height: 40px;
+	background-color: #7d9cde;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	color: white;
+}
+
+.sound_off {
+	cursor: pointer;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 9999;
+	width: 40px;
+	height: 40px;
+	background-color: #7d9cde;
+	border-radius: 50%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	color: white;
 }
