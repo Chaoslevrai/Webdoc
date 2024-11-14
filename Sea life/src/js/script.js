@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	// Appliquer une transition CSS à la barre de chargement
-	loadingBar.style.transition = "width 0.5s ease-in-out";
+	loadingBar.style.transition = "width 0.18s ease-in-out";
 
 	// Met à jour la barre de chargement en fonction du scroll
 	window.addEventListener("scroll", updateLoadingBar);
@@ -98,4 +98,26 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+// Bloquer le défilement de la page pendant le chargement
 document.documentElement.style.overflow = "hidden";
+
+const interval = setInterval(() => {
+	const pourcentage = document.querySelector(".pourcentage");
+	const chargement = document.querySelector(".chargement");
+	const width = chargement.clientWidth;
+	const maxWidth = document.body.clientWidth; // Largeur totale de la page
+
+	// Calculer la nouvelle largeur en s'assurant de ne pas dépasser 100 %
+	const newWidth = Math.min(width + 1, maxWidth);
+	chargement.style.width = `${newWidth}px`;
+
+	// Calculer le pourcentage et l'afficher
+	const percentComplete = Math.floor((newWidth / maxWidth) * 100);
+	pourcentage.textContent = `${percentComplete}%`;
+
+	// Vérifier si le chargement est terminé
+	if (percentComplete >= 100) {
+		clearInterval(interval); // Arrêter l'animation
+		document.documentElement.style.overflow = ""; // Réactiver le défilement
+	}
+}, 3); // Intervalle pour mise à jour rapide
