@@ -97,3 +97,5 @@ document.addEventListener("DOMContentLoaded", function () {
 		music.play();
 	});
 });
+
+document.documentElement.style.overflow = "hidden";
