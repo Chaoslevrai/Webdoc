@@ -88,7 +88,7 @@ h3 {
 }
 .auteur {
 	font-size: 0.6em; /* Style pour le texte de l’auteur */
-	color: #555555; /* Couleur plus sombre pour contraste */
+	color: #000000; /* Couleur plus sombre pour contraste */
 }
 
 /* Positionnement adaptatif */
@@ -105,7 +105,7 @@ h3 {
 	left: 70vw;
 }
 .quizz {
-	top: 60vh;
+	top: 57vh;
 	left: 10vw;
 }
 .chapitre4 {
@@ -298,9 +298,10 @@ h3 {
 
 @media (max-width: 480px) {
 	.introchap {
-		width: 20vw;
-		height: 20vw;
+		width: 10vw;
+		height: 10vw;
 		top: 20vh;
+		font-size: 2.5vw;
 	}
 }
 
