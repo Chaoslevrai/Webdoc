@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const soundIcon = document.querySelector(".sound_on");
 	const soundOffIcon = document.querySelector(".sound_off");
 	const music = new Audio("src/img/sonaqua.mp3");
-	music.volume = 0.2; // Set initial volume to 50%
+	music.volume = 0.2;
 
 	soundIcon.addEventListener("click", function () {
 		soundIcon.style.display = "none";
@@ -121,3 +121,26 @@ const interval = setInterval(() => {
 		document.documentElement.style.overflow = ""; // Réactiver le défilement
 	}
 }, 3); // Intervalle pour mise à jour rapide
+const audio = document.getElementById("quiz-audio");
+const options = document.querySelectorAll(".options img");
+const result = document.getElementById("result");
+
+// Expected answer for this round
+let correctAnswer = "dolphin";
+
+// Play the sound when the page loads
+audio.play();
+
+// Add event listeners to the images
+options.forEach((option) => {
+	option.addEventListener("click", () => {
+		const userAnswer = option.getAttribute("data-answer");
+		if (userAnswer === correctAnswer) {
+			result.textContent = "Bonne réponse ! 🐬";
+			result.style.color = "lime";
+		} else {
+			result.textContent = "Mauvaise réponse. Réessayez !";
+			result.style.color = "red";
+		}
+	});
+});
