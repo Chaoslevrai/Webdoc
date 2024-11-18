@@ -120,7 +120,9 @@ const interval = setInterval(() => {
 		clearInterval(interval); // Arrêter l'animation
 		document.documentElement.style.overflow = ""; // Réactiver le défilement
 	}
-}, 3); // Intervalle pour mise à jour rapide
+}, 3);
+
+// Intervalle pour mise à jour rapide
 const audio = document.getElementById("quiz-audio");
 const options = document.querySelectorAll(".options img");
 const result = document.getElementById("result");

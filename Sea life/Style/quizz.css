@@ -48,13 +48,20 @@
 	gap: 40px;
 	margin-top: 50px;
 }
-.options img {
-	width: 100px;
-	height: 100px;
-	cursor: pointer;
-	transition: transform 0.2s ease;
+.options {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 	position: absolute;
 	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.options img {
+	width: 300px;
+	cursor: pointer;
+	transition: transform 0.2s ease;
 }
 .options img:hover {
 	transform: scale(1.1);
@@ -64,4 +71,13 @@
 	margin-top: 20px;
 	font-size: 20px;
 	color: white;
+}
+.play {
+	position: absolute;
+	top: 80%;
+	left: 47.3%;
+	cursor: pointer;
+}
+.play:hover {
+	transform: scale(1.1);
 }
