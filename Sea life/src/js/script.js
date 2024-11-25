@@ -1,3 +1,7 @@
+// =====================================
+// Section 1: Scroll to Sections on Wheel Event
+// =====================================
+
 let currentSection = 0;
 const sections = document.querySelectorAll(".section");
 
@@ -23,61 +27,69 @@ window.addEventListener("wheel", (event) => {
 	}
 });
 
+// =====================================
+// Section 2: Mise à jour de la barre de chargement
+// =====================================
+
 document.addEventListener("DOMContentLoaded", function () {
 	const loadingBar = document.querySelector(".guerriervoire");
 
-	// Fonction qui met à jour la largeur de la barre en fonction de la position de scroll
 	function updateLoadingBar() {
-		const scrollTop = window.scrollY; // Position actuelle du scroll
-		const docHeight = document.body.scrollHeight - window.innerHeight; // Hauteur totale scrollable
-		const scrollPercent = (scrollTop / docHeight) * 100; // Pourcentage de scroll
+		const scrollTop = window.scrollY;
+		const docHeight = document.body.scrollHeight - window.innerHeight;
+		const scrollPercent = (scrollTop / docHeight) * 100;
 
-		loadingBar.style.width = scrollPercent + "%"; // Mise à jour de la largeur
+		loadingBar.style.width = scrollPercent + "%";
 	}
 
-	// Appliquer une transition CSS à la barre de chargement
 	loadingBar.style.transition = "width 0.18s ease-in-out";
 
-	// Met à jour la barre de chargement en fonction du scroll
 	window.addEventListener("scroll", updateLoadingBar);
 });
 
+// =====================================
+// Section 3: Animation de la barre de chargement au démarrage
+// =====================================
+
 document.addEventListener("DOMContentLoaded", function () {
 	const loadingBar = document.querySelector(".guerriervoire");
-	let width = 0; // Start width
+	let width = 0;
 
-	// Increment width every 30 milliseconds
 	const interval = setInterval(() => {
 		if (width >= 100) {
-			clearInterval(interval); // Stop the interval when it reaches 100%
+			clearInterval(interval);
 		} else {
-			width += 1; // Increment width
-			loadingBar.style.width = width + "%"; // Apply new width
+			width += 1;
+			loadingBar.style.width = width + "%";
 		}
-	}, 30); // Adjust the interval duration as needed
+	}, 30);
 });
+
+// =====================================
+// Section 4: Animation de l'apparition des éléments
+// =====================================
+
 document.addEventListener("DOMContentLoaded", function () {
 	const fadeInElements = document.querySelectorAll(".fade-in");
 
-	// Fonction pour vérifier si l'élément est visible dans le viewport
 	function checkVisibility() {
 		fadeInElements.forEach((element) => {
 			const rect = element.getBoundingClientRect();
 			const windowHeight = window.innerHeight;
 
-			// Si l'élément est visible dans la fenêtre de visualisation
 			if (rect.top <= windowHeight && rect.bottom >= 0) {
 				element.classList.add("visible");
 			}
 		});
 	}
 
-	// Vérifier la visibilité lors du scroll
 	window.addEventListener("scroll", checkVisibility);
-
-	// Vérifier immédiatement au chargement de la page pour les éléments visibles dès le début
 	checkVisibility();
 });
+
+// =====================================
+// Section 5: Contrôle du son
+// =====================================
 
 document.addEventListener("DOMContentLoaded", function () {
 	const soundIcon = document.querySelector(".sound_on");
@@ -98,51 +110,178 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-// Bloquer le défilement de la page pendant le chargement
+// =====================================
+// Section 6: Bloquer le défilement pendant le chargement
+// =====================================
+
 document.documentElement.style.overflow = "hidden";
 
 const interval = setInterval(() => {
 	const pourcentage = document.querySelector(".pourcentage");
 	const chargement = document.querySelector(".chargement");
 	const width = chargement.clientWidth;
-	const maxWidth = document.body.clientWidth; // Largeur totale de la page
+	const maxWidth = document.body.clientWidth;
 
-	// Calculer la nouvelle largeur en s'assurant de ne pas dépasser 100 %
 	const newWidth = Math.min(width + 1, maxWidth);
 	chargement.style.width = `${newWidth}px`;
 
-	// Calculer le pourcentage et l'afficher
 	const percentComplete = Math.floor((newWidth / maxWidth) * 100);
 	pourcentage.textContent = `${percentComplete}%`;
 
-	// Vérifier si le chargement est terminé
 	if (percentComplete >= 100) {
-		clearInterval(interval); // Arrêter l'animation
-		document.documentElement.style.overflow = ""; // Réactiver le défilement
+		clearInterval(interval);
+		document.documentElement.style.overflow = "";
 	}
 }, 3);
 
-// Intervalle pour mise à jour rapide
+// =====================================
+// Section 7: Quiz Interaction
+// =====================================
+
 const audio = document.getElementById("quiz-audio");
-const options = document.querySelectorAll(".options img");
+const optionsContainer = document.querySelector(".options");
+const questionContainer = document.querySelector(".question");
 const result = document.getElementById("result");
 
-// Expected answer for this round
-let correctAnswer = "dolphin";
+let currentQuestionIndex = 0;
+const questions = [
+	{
+		question: "Quel animal marin produit ce son ?",
+		sound: "src/imganimaux/Turtle_sound.mp3",
+		correctAnswer: "Tortue",
+		options: [
+			{
+				text: "Beluga",
+				answer: "Requin",
+				img: "src/imganimaux/requin.png",
+			},
+			{
+				text: "Crabe",
+				answer: "Crabe",
+				img: "src/imganimaux/crabe.png",
+			},
+			{
+				text: "Tortue",
+				answer: "Tortue",
+				img: "src/imganimaux/tortue.png",
+			},
+		],
+	},
+	{
+		question: "Quel animal fait ce bruit ?",
+		sound: "src/imganimaux/Whale_sound.mp3",
+		correctAnswer: "Requin",
+		options: [
+			{
+				text: "Tortue",
+				answer: "Tortue",
+				img: "src/imganimaux/tortue.png",
+			},
+			{
+				text: "Requin",
+				answer: "Requin",
+				img: "src/imganimaux/requin2.png",
+			},
+			{
+				text: "Crabes",
+				answer: "Crabes",
+				img: "src/imganimaux/crabe.png",
+			},
+		],
+	},
+	{
+		question: "Quel animal produit ce bruit ?",
+		sound: "src/imganimaux/rays.mp3",
+		correctAnswer: "Raies",
+		options: [
+			{
+				text: "Dauphin",
+				answer: "dolphin",
+				img: "src/imganimaux/pieuvre.png",
+			},
+			{
+				text: "Raies",
+				answer: "Raies",
+				img: "src/imganimaux/raie.png",
+			},
+			{
+				text: "Phoque",
+				answer: "seal",
+				img: "src/imganimaux/manchot.png",
+			},
+		],
+	},
+	{
+		question: "Quel animal produit ce son ?",
+		sound: "src/imganimaux/seahorse.mp3",
+		correctAnswer: "seahorse",
+		options: [
+			{
+				text: "seahorse",
+				answer: "seahorse",
+				img: "src/imganimaux/hyppo.png",
+			},
+			{
+				text: "poisson",
+				answer: "poisson",
+				img: "src/imganimaux/poisson.png",
+			},
+			{
+				text: "raie",
+				answer: "raie",
+				img: "src/imganimaux/raie.png",
+			},
+		],
+	},
+];
 
-// Play the sound when the page loads
-audio.play();
+function loadQuestion() {
+	const currentQuestion = questions[currentQuestionIndex];
+	questionContainer.textContent = currentQuestion.question;
+	audio.src = currentQuestion.sound;
 
-// Add event listeners to the images
-options.forEach((option) => {
-	option.addEventListener("click", () => {
-		const userAnswer = option.getAttribute("data-answer");
-		if (userAnswer === correctAnswer) {
-			result.textContent = "Bonne réponse ! 🐬";
-			result.style.color = "lime";
-		} else {
-			result.textContent = "Mauvaise réponse. Réessayez !";
-			result.style.color = "red";
-		}
+	optionsContainer.innerHTML = "";
+
+	currentQuestion.options.forEach((option) => {
+		const optionElement = document.createElement("img");
+		optionElement.src = option.img;
+		optionElement.alt = option.text;
+		optionElement.setAttribute("data-answer", option.answer);
+		optionsContainer.appendChild(optionElement);
 	});
+}
+
+function checkAnswer(userAnswer) {
+	const currentQuestion = questions[currentQuestionIndex];
+	if (userAnswer === currentQuestion.correctAnswer) {
+		result.textContent = "Bonne réponse ! 🐬";
+		result.style.color = "lime";
+	} else {
+		result.textContent = "Mauvaise réponse. Réessayez !";
+		result.style.color = "red";
+	}
+
+	setTimeout(() => {
+		result.textContent = "";
+		if (currentQuestionIndex < questions.length - 1) {
+			currentQuestionIndex++;
+			loadQuestion();
+		} else {
+			result.textContent = "Quiz terminé !";
+			result.style.color = "blue";
+		}
+	}, 2000);
+}
+
+document.querySelector(".play").addEventListener("click", () => {
+	audio.play();
 });
+
+optionsContainer.addEventListener("click", (event) => {
+	if (event.target.tagName === "IMG") {
+		const userAnswer = event.target.getAttribute("data-answer");
+		checkAnswer(userAnswer);
+	}
+});
+
+loadQuestion();
