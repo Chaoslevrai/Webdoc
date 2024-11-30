@@ -1,0 +1,333 @@
+@font-face {
+	font-family: "SF UI";
+	src: url("src/font/san_francisco-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url("https://fonts.cdnfonts.com/css/sf-ui-text-2");
+@font-face {
+	font-family: "Yang Bagus";
+	src: url("src/font/Yang-Bagus.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.retour {
+	position: absolute;
+	top: 10%;
+	left: 2%;
+	color: #ffffff;
+	font-weight: lighter;
+	cursor: pointer;
+	animation: moveLeftRight 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes moveLeftRight {
+	0% {
+		transform: translateX(-5px);
+	}
+	100% {
+		transform: translateX(5px);
+	}
+}
+
+.titre {
+	font-family: "Yang Bagus", sans-serif;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	position: absolute;
+	top: 35%;
+	left: 0;
+	background-color: #222222;
+	padding: 1%;
+	transform: translate(0, -50%);
+	text-align: left;
+}
+.auteur {
+	text-align: left;
+	margin-left: 10px;
+	position: absolute;
+	bottom: 55%;
+	left: 1%;
+}
+.texte1 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	margin-left: 10px;
+	position: absolute;
+	bottom: 30%;
+	left: 1%;
+	width: 80%;
+}
+/* les classe titre, auteur, texte1 et plonge sont utilis  s pour le chapitre 3, il s'agit de la pr sentation de l'Atlantique, du tunnel oceanique et de la m duse */
+
+.plonge {
+	text-align: left;
+	margin-left: 10px;
+	position: absolute;
+	bottom: 45%;
+	left: 1%;
+    background-color: #FF934B;
+    width: 63%;
+    box-shadow: inset 0 -0.9 rgb(0, 0, 0); /* Couleur de surlignage */
+    display: inline; /* Nécessaire pour fonctionner avec le texte */
+}
+
+.section {
+	position: relative;
+}
+.menace {
+	position: absolute;
+	bottom: 80%;
+	left: 50.5%;
+	width: 45%;
+    background-color: #FF934B;
+    width: 45%;
+    box-shadow: inset 0 -0.9 rgb(0, 0, 0); /* Couleur de surlignage */
+    display: inline; /* Nécessaire pour fonctionner avec le texte */
+}
+.texte2 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	margin-left: 10px;
+	position: absolute;
+	color: #ffffff;
+	bottom: 20%;
+	left: 45%;
+	width: 50%;
+}
+
+/* les classe titre, auteur, texte1 et plonge sont utilis  s pour le chapitre 1, il s'agit de la pr sentation de l'Atlantique, du tunnel oceanique et de la m duse */
+
+.ecosystemes {
+	position: absolute;
+	bottom: 60%;
+	left: 0.8%;
+    background-color: #FF934B;
+    width: 45%;
+    box-shadow: inset 0 -0.9 rgb(0, 0, 0); /* Couleur de surlignage */
+    display: inline; /* Nécessaire pour fonctionner avec le texte */
+}
+.texte3 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	margin-left: 10px;
+	position: absolute;
+	color: #ffffff;
+	bottom: 32%;
+	left: 0%;
+	width: 70%;
+}
+/* les classe titre, auteur, texte1 et plonge sont utilis  s pour le chapitre 1, il s'agit de la pr sentation de l'Atlantique, du tunnel oceanique et de la m duse */
+.récifs {
+	position: absolute;
+	bottom: 70%;
+	left: 55%;
+	width: 50%;
+    background-color: #FF934B;
+    width: 40%;
+    box-shadow: inset 0 -0.9 rgb(0, 0, 0); /* Couleur de surlignage */
+    display: inline; /* Nécessaire pour fonctionner avec le texte */
+}
+.texte4 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	position: absolute;
+	color: #ffffff;
+	bottom: 35%;
+	left: 50%;
+	width: 50%;
+	height: auto;
+	z-index: 1;
+	font-size: 75%;
+}
+.aileron {
+	position: absolute;
+	bottom: 1%;
+    left: 90%;
+	width: 8%;
+}
+
+.etoile {
+	position: absolute;
+	bottom: 1%;
+    left: 90%;
+	width: 10%;
+}
+.tropicale {
+	position: absolute;
+	bottom: 5%;
+	right: 63%;
+	width: 30%;
+    border-radius: 10%;
+}
+
+.pirate {
+    width: 50%;
+    height: 1000px;
+    margin-right: 55%;
+}
+.resize {
+	position: absolute;
+	bottom: 72%;
+	right: 57%;
+	width: 10%;
+	cursor: pointer;
+}
+/* On utilise la classe resize pour r  duire la taille de l'image corail */
+.polaire {
+	position: absolute;
+	top: 14%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+    background-color: #FF934B;
+    width: 45%;
+    box-shadow: inset 0 -0.9 rgb(0, 0, 0); /* Couleur de surlignage */
+    display: inline; /* Nécessaire pour fonctionner avec le texte */
+}
+
+.texte5 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	margin-left: 10px;
+	position: absolute;
+	color: #ffffff;
+	bottom: 67%;
+	left: 50%;
+	width: 70%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	font-size: 75%;
+}
+.jouet {
+    position: absolute;
+	width: 50%;
+	height: 800px;
+    margin-top: 25%;
+}
+
+.bulle1 {
+    position: absolute;
+    width: 20%;
+    margin-top: 10%;
+    margin-left: 100%;
+}
+
+.bulle2 {
+    position: absolute;
+    width: 20%;
+    margin-top: 48%;
+    margin-right: 80.5%;
+}
+/* On utilise la classe resize pour r  duire la taille de l'image corail */
+.foret {
+	position: absolute;
+	top: 30%;
+	left: 4%;
+    width: 40%;
+    background-color: #FF934B;
+    box-shadow: inset 0 -0.9 rgb(0, 0, 0); /* Couleur de surlignage */
+    display: inline; /* Nécessaire pour fonctionner avec le texte */
+}
+.texte6 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	position: absolute;
+	color: #ffffff;
+	left: 4%;
+	width: 50%;
+	font-size: 75%;
+}
+
+ul {
+    margin-top: 2%;
+}
+.fivepancartes {
+	position: absolute;
+	width: 40%;
+	top: 20%;
+	right: 5%;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+.introchap {
+	cursor: pointer;
+	position: absolute;
+	bottom: 5%;
+	right: 18%;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	transition: all 0.5s ease-in-out;
+}
+
+.introchap:hover {
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 10px #7d9cde);
+}
+
+/* On utilise la classe resize pour r  duire la taille de l'image corail */
+.ludique {
+	position: absolute;
+	top: 30%;
+	left: 4%;
+}
+.texte7 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	position: absolute;
+	color: #ffffff;
+	left: 4%;
+	width: 50%;
+	font-size: 75%;
+}
+.exploration {
+	position: absolute;
+	top: 50%;
+	right: 2%;
+}
+.texte8 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: right;
+	position: absolute;
+	color: #ffffff;
+	right: 1%;
+	width: 50%;
+	font-size: 75%;
+	top: 60%;
+}
+.quote {
+	font-family: "SF UI Text", sans-serif;
+	text-align: right;
+	position: absolute;
+	color: #ffffff;
+	right: 1%;
+	width: 50%;
+	font-size: 75%;
+	top: 60%;
+}
+
+.precedent {
+    margin-right: 30%;
+    font-size: 90px;
+}
+
+.precedent:hover {
+    transform: scale(1.1);
+	filter: drop-shadow(0 0 10px #FF934B);
+}
+
+.suivant {
+    font-size: 90px;
+}
+
+.suivant:hover {
+    	transform: scale(1.1);
+	filter: drop-shadow(0 0 10px #FF934B);
+}
