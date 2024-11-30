@@ -29,6 +29,16 @@
 		transform: translateX(5px);
 	}
 }
+.background {
+	transform: scale(67%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.3;
+	position: fixed;
+	top: -125%;
+	left: -45%;
+	z-index: -1;
+}
 .question {
 	display: flex;
 	flex-direction: column;

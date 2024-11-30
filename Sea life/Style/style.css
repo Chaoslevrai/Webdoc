@@ -35,8 +35,7 @@ body {
 body {
 	background-color: #7d9cde;
 }
-#section1
-#section2 {
+#section1 #section2 {
 	background-color: #7d9cde00;
 }
 html {
@@ -94,33 +93,30 @@ html {
 }
 
 .background {
-	
-	
 	transform: scale(67%);
-	
 	background-repeat: no-repeat;
 	background-size: cover;
 	opacity: 0.3;
 	position: fixed;
-	top: -125%; 
+	top: -125%;
 	left: -45%;
 	z-index: -1;
 }
 .precedent {
-    margin-right: 30%;
-    font-size: 90px;
+	margin-right: 30%;
+	font-size: 90px;
 }
 
 .precedent:hover {
-    transform: scale(1.1);
-	filter: drop-shadow(0 0 10px #FF934B);
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 10px #ff934b);
 }
 
 .suivant {
-    font-size: 90px;
+	font-size: 90px;
 }
 
 .suivant:hover {
-    	transform: scale(1.1);
-	filter: drop-shadow(0 0 10px #FF934B);
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 10px #ff934b);
 }
