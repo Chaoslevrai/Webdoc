@@ -43,6 +43,33 @@
 }
 /* les classe titre, auteur, texte1 et plonge sont utilis  s pour le chapitre 1, il s'agit de la pr sentation de l'Atlantique, du tunnel oceanique et de la m duse */
 
+.accueilimg {
+	height: 50%;
+	margin-left: 50%;
+	margin-top: -15%;
+	border-radius: 5%;
+}
+
+
+.zoneTacticleimg {
+	height: 30%;
+	margin-left: 100%;
+	margin-top: -25%;
+	border-radius: 5%;
+	
+}
+
+
+.Sealifetrustimg {
+	height: 28%;
+	margin-right: 90%;
+	margin-top: 37%;
+	border-radius: 5%;
+	
+}
+
+
+
 .plonge {
 	text-align: left;
 	margin-left: 10px;
@@ -65,7 +92,7 @@
 	text-align: left;
 	margin-left: 10px;
 	position: absolute;
-	color: #000;
+	color: #ffffff;
 	bottom: 20%;
 	left: 50%;
 	width: 50%;
@@ -119,6 +146,22 @@
 	right: 60%;
 	width: 30%;
 }
+
+.tunnelimg {
+	height: 40%;
+	margin-left: 50%;
+	margin-top: -17%;
+	border-radius: 5%;
+}
+
+.atlantiqueimg {
+	height: 70%;
+	margin-right: 50%;
+	margin-top: 3%;
+	border-radius: 5%;
+}
+
+
 .resize {
 	position: absolute;
 	bottom: 72%;
