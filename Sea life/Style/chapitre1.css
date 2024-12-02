@@ -140,3 +140,6 @@ body {
 	font-size: 1.1rem; /* Evite d'utiliser des unités trop grandes comme % */
 	line-height: 1.5;
 }
+.gif-container img {
+	width: 300px;
+}
