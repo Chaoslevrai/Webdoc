@@ -55,17 +55,6 @@ body {
 	cursor: pointer;
 	animation: moveLeftRight 0.5s ease-in-out infinite alternate;
 }
-.background {
-	transform: scale(55%);
-
-	background-repeat: no-repeat;
-	background-size: auto;
-	opacity: 0.3;
-	position: fixed;
-	top: -125%;
-	left: -45%;
-	z-index: -1;
-}
 
 .salegentil {
 	padding: 25px;
