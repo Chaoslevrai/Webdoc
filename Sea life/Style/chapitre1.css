@@ -12,64 +12,131 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: "SF UI";
+	src: url("src/font/san_francisco-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url("https://fonts.cdnfonts.com/css/sf-ui-text-2");
+@font-face {
+	font-family: "Yang Bagus";
+	src: url("src/font/Yang-Bagus.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: auto;
+	color: #ffffff;
+}
 
 .titre {
 	font-family: "Yang Bagus", sans-serif;
 	text-align: left;
 	font-size: 2em;
-	color: #ffffff;
-	position: absolute;
-	top: 35%;
-	left: 2%; /* Ajustement pour éviter de trop coller au bord */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
 }
 
-.l {
+.soustitre {
+	font-family: "Yang Bagus", sans-serif;
+	text-align: left;
+	font-size: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 17px;
+}
+
+.rounded-gif {
+	border-radius: 20px;
+	max-width: 100%;
+}
+.retour {
+	position: absolute;
+	top: 30px;
+	left: 2%;
+	color: #ffffff;
+	font-weight: lighter;
+	cursor: pointer;
+	animation: moveLeftRight 0.5s ease-in-out infinite alternate;
+}
+
+.salegentil {
+	padding: 25px;
+	transform: scale(55%);
+	margin-left: 15%;
+	margin-right: auto;
+	max-width: 200px;
+	display: block;
+}
+
+.layout {
+	padding: 27px;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	gap: 8px;
+}
+
+.layout2 {
+	padding: 27px;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	gap: 8px;
+}
+
+.texte1 {
+	max-width: 750px;
+	font-family: "SF UI Text", sans-serif;
+	margin-left: 1%;
+	padding: 20px;
+	text-align: left;
+	font-size: 1.1rem; /* Evite d'utiliser des unités trop grandes comme % */
+	line-height: 1.5;
+}
+
+.immersion {
+	max-width: 750px;
+	margin-left: 1%;
+	padding: 20px;
+
+	text-align: center;
+}
+.cool {
+	margin-left: 3%;
+	text-align: left;
+	font-size: 1.5em;
+}
+
+.vocation {
+	max-width: 750px;
+	margin-right: 0;
+	padding: 20px;
+	text-align: center;
+	float: right;
+}
+
+.genial {
+	margin-right: 1%;
+	font-size: 1.5em;
+}
+
+.requin {
+	transform: scale(110%);
+}
+.texte2 {
 	font-family: "SF UI Text", sans-serif;
 	text-align: left;
-	position: absolute;
-	color: #ffffff;
-	left: 2%;
-	top: 50%;
-	width: 80%;
-	font-size: 1.8rem; /* Evite d'utiliser des unités trop grandes comme % */
-	line-height: 1.5; /* Améliore la lisibilité */
-}
-.historique {
-	font-family: "yang bagus";
-	font-size: larger;
-}
-.img1 {
-	position: absolute;
-	top: 1%;
-	left: 95%;
-	border-radius: 50%;
-	height: 200px;
-	width: 200px;
-	overflow: hidden;
-	object-fit: cover; /* Pour garantir que l'image s'adapte bien */
-}
-.img2 {
-	position: absolute;
-	top: 10%;
-	left: 0;
-	border-radius: 50%;
-	height: 120px;
-	width: 120px;
-	overflow: hidden;
-	object-fit: cover;
-}
-@media (max-width: 768px) {
-	.titre {
-		font-size: 1.5rem;
-		left: 5%;
-	}
-	.l {
-		font-size: 1rem;
-		width: 90%;
-	}
-	.img1,
-	.img2 {
-		height: 100px;
-		width: 100px;
-	}
+	font-size: 1.1rem; /* Evite d'utiliser des unités trop grandes comme % */
+	line-height: 1.5;
 }
