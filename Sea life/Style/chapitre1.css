@@ -1,0 +1,23 @@
+@font-face {
+	font-family: "SF UI";
+	src: url("src/font/san_francisco-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url("https://fonts.cdnfonts.com/css/sf-ui-text-2");
+@font-face {
+	font-family: "Yang Bagus";
+	src: url("src/font/Yang-Bagus.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.titre {
+	font-family: "Yang Bagus", sans-serif;
+	text-align: left;
+	font-size: 2em;
+	color: #ffffff;
+	position: absolute;
+	top: 35%;
+}
