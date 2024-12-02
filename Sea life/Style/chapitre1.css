@@ -20,4 +20,19 @@
 	color: #ffffff;
 	position: absolute;
 	top: 35%;
+	left: 0.2%;
+}
+.l {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	position: absolute;
+	color: #ffffff;
+	left: 0.7%;
+	top: 50%;
+	width: 80%;
+	font-size: 180%;
+}
+.historique {
+	font-family: "yang bagus";
+	font-size: larger;
 }
