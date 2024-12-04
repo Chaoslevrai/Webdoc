@@ -29,6 +29,7 @@
 html {
 	scroll-behavior: smooth;
 }
+
 body {
 	text-align: center;
 	padding: 0;
@@ -76,6 +77,88 @@ body {
 	margin: 100px auto; /* Centre horizontalement et descend l'image légèrement */
 	display: block;
 	z-index: -1;
+	max-width: 100%; /* Ensure the image is responsive */
+	height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+	/* For medium to large screens (e.g., tablets, small laptops) */
+	#section1 h1 {
+		font-size: clamp(
+			22px,
+			5vw,
+			40px
+		); /* Adjust title size for medium screens */
+		margin-bottom: 1.5rem; /* Reduced bottom margin */
+	}
+
+	.description {
+		font-size: clamp(
+			16px,
+			1.5vw,
+			18px
+		); /* Adjust paragraph size for medium screens */
+		max-width: 90%; /* Increase text width for better readability */
+	}
+
+	.aquagif {
+		margin-top: 80px; /* Adjust top margin for the image */
+	}
+}
+
+@media screen and (max-width: 768px) {
+	/* For tablets or smaller screens */
+	#section1 {
+		padding: 0 4%; /* Slightly reduce padding */
+	}
+
+	#section1 h1 {
+		font-size: clamp(
+			20px,
+			6vw,
+			32px
+		); /* Adjust heading size for smaller screens */
+		margin-bottom: 1rem; /* Adjust spacing */
+	}
+
+	.description {
+		font-size: clamp(
+			14px,
+			4vw,
+			16px
+		); /* Adjust paragraph size for readability */
+		max-width: 95%; /* Make text area wider */
+	}
+
+	.aquagif {
+		margin-top: 60px; /* Adjust top margin for the image */
+	}
+}
+
+@media screen and (max-width: 480px) {
+	/* For mobile screens */
+	body {
+		font-size: 4vw; /* Adjust base font size for mobile devices */
+	}
+
+	#section1 {
+		padding: 0 3%; /* Adjust padding for smaller screens */
+	}
+
+	#section1 h1 {
+		font-size: clamp(18px, 8vw, 28px); /* Adjust heading size for mobile */
+		margin-bottom: 1rem; /* Adjust spacing */
+	}
+
+	.description {
+		font-size: clamp(12px, 5vw, 14px); /* Adjust paragraph size */
+		max-width: 100%; /* Full width text */
+	}
+
+	.aquagif {
+		margin-top: 40px; /* Adjust top margin for the image */
+	}
 }
 
 /*==========================================================================================*/
@@ -252,7 +335,6 @@ body {
 /*==========================================================================================*/
 
 #section3 {
-	background-color: #7bff00;
 	display: table;
 	max-width: none;
 	width: 100%;
