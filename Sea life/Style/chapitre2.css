@@ -1,387 +1,125 @@
-@font-face {
-	font-family: "SF UI";
-	src: url("src/font/san_francisco-webfont.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
+html {
+	scroll-behavior: smooth;
 }
-
-@import url("https://fonts.cdnfonts.com/css/sf-ui-text-2");
-@font-face {
-	font-family: "Yang Bagus";
-	src: url("src/font/Yang-Bagus.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: "SF UI";
-	src: url("src/font/san_francisco-webfont.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
-
-@import url("https://fonts.cdnfonts.com/css/sf-ui-text-2");
-@font-face {
-	font-family: "Yang Bagus";
-	src: url("src/font/Yang-Bagus.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
-
-.titre {
-	font-family: "Yang Bagus", sans-serif;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	position: absolute;
-	top: 35%;
-	left: 0;
-	background-color: #222222;
-	padding: 1%;
-	transform: translate(0, -50%);
-	text-align: left;
-}
-.auteur {
-	text-align: left;
-	margin-left: 10px;
-	position: absolute;
-	bottom: 55%;
-	left: 1%;
-}
-.texte1 {
-	padding: -10%;
-	font-family: "SF UI Text", sans-serif;
-	text-align: left;
-	margin-left: 10px;
-	position: absolute;
-	bottom: 10%;
-	left: 1%;
-	width: 60%;
-	font-size: 70%;
-}
-/* les classe titre, auteur, texte1 et plonge sont utilis  s pour le chapitre 1, il s'agit de la pr sentation de l'Atlantique, du tunnel oceanique et de la m duse */
-
-.accueilimg {
-	height: 45%;
-	margin-left: 50%;
-	margin-top: -18%;
-	border-radius: 5%;
-}
-
-
-.zoneTacticleimg {
-	height: 50%;
-	margin-left: 50%;
-	margin-top: -15%;
-	border-radius: 5%;
-	
-}
-
-
-.Sealifetrustimg {
-	height: 50%;
-	margin-right: 50%;
-	margin-top: 20%;
-	border-radius: 5%;
-	
-}
-
-
-
-.plonge {
-	padding: 20%;
-	text-align: left;
-	margin-left: -20%;
-	position: absolute;
-	
-	left: 1%;
-}
-
-.section {
-	position: relative;
-}
-.atlantique {
-	position: absolute;
-	bottom: 70%;
-	left: 47%;
-	width: 50%;
-}
-.texte2 {
-	font-family: "SF UI Text", sans-serif;
-	text-align: left;
-	margin-left: 10px;
-	position: absolute;
-	color: #ffffff;
-	bottom: 20%;
-	left: 49%;
-	width: 50%;
-	font-size: 70%;
-}
-
-
-/* les classe titre, auteur, texte1 et plonge sont utilis  s pour le chapitre 1, il s'agit de la pr sentation de l'Atlantique, du tunnel oceanique et de la m duse */
-
-.tunnel {
-	position: absolute;
-	bottom: 60%;
-	left: 0.8%;
-}
-.texte3 {
-	font-family: "SF UI Text", sans-serif;
-	text-align: left;
-	margin-left: 10px;
-	position: absolute;
-	color: #ffffff;
-	bottom: 20%;
-	left: 0%;
-	width: 70%;
-	font-size: 70%;
-}
-/* les classe titre, auteur, texte1 et plonge sont utilis  s pour le chapitre 1, il s'agit de la pr sentation de l'Atlantique, du tunnel oceanique et de la m duse */
-.récifs {
-	position: absolute;
-	bottom: 70%;
-	left: 42%;
-	width: 50%;
-}
-.texte4 {
-	font-family: "SF UI Text", sans-serif;
-	text-align: left;
-	position: absolute;
-	color: #ffffff;
-	bottom: 20%;
-	left: 45%;
-	width: 50%;
-	height: auto;
-	z-index: 1;
-	font-size: 70%;
-}
-.corail {
-	position: absolute;
-	bottom: 10%;
-	right: 0%;
-	width: 15%;
-}
-.corailimg {
-	position: absolute;
-	bottom: 35%;
-	right: 60%;
-	width: 30%;
-}
-
-.tunnelimg {
-	height: 35%;
-	margin-left: 60%;
-	margin-top: -25%;
-	border-radius: 5%;
-}
-
-.atlantiqueimg {
-	height: 70%;
-	margin-right: 50%;
-	margin-top: 3%;
-	border-radius: 5%;
-}
-
-
-.resize {
-	position: absolute;
-	bottom: 72%;
-	right: 57%;
-	width: 10%;
-	cursor: pointer;
-}
-/* On utilise la classe resize pour r  duire la taille de l'image corail */
-.polaire {
-	position: absolute;
-	top: 14%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+body {
 	text-align: center;
+	padding: 0;
+	margin: 0;
+	color: white;
+	font-size: 1.9vw;
 }
 
-.texte5 {
-	font-family: "SF UI Text", sans-serif;
-	text-align: left;
-	margin-left: 10px;
-	position: absolute;
-	color: #ffffff;
-	bottom: 20%;
-	left: 50%;
-	width: 70%;
-	transform: translate(-50%, -50%);
-	z-index: 1;
-	font-size: 70%;
-}
-.decorimg {
-	position: absolute;
+#section1 {
+	display: flex; /* Utilise Flexbox pour centrer */
+	flex-direction: column; /* Organise les enfants verticalement */
+	align-items: center; /* Centre horizontalement */
+	justify-content: center; /* Centre verticalement */
+	max-width: none;
 	width: 100%;
-	height: auto;
-	bottom: 0%;
+	height: 100vh; /* Hauteur complète de la fenêtre */
+	text-align: center;
+	position: relative; /* Permet des ajustements de position */
+	top: -5%; /* Ajuste la position verticale */
+	padding: 0 5%; /* Ajoute un peu de marge intérieure sur les côtés */
 }
 
-.neige {
-	position: absolute;
-	width: 5%;
-	top: 19%;
-	z-index: 2;
-	right: 15%;
-}
-/* On utilise la classe resize pour r  duire la taille de l'image corail */
-.foret {
-	position: absolute;
-	top: 30%;
-	left: 2%;
-}
-.texte6 {
-	font-family: "SF UI Text", sans-serif;
-	text-align: left;
-	position: absolute;
-	color: #ffffff;
-	left: 2%;
-	width: 50%;
-	font-size: 70%;
-}
-.amazone {
-	position: absolute;
-	width: 30%;
-	top: 4%;
-	right: 5%;
-	user-select: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
+#section1 h1 {
+	font-size: clamp(24px, 4vw, 48px); /* Taille du texte responsive */
+	line-height: 1.4; /* Espacement entre les lignes */
+	color: white;
+	margin-bottom: 2rem; /* Espacement plus raisonnable avec le paragraphe */
 }
 
-.html.body{
-	overflow: auto;
+.description {
+	font-size: clamp(
+		14px,
+		1.5vw,
+		20px
+	); /* Taille responsive pour les paragraphes */
+	line-height: 1.8; /* Améliore la lisibilité du texte */
+	color: #e0e0e0; /* Légère variation pour différencier du titre */
+	max-width: 800px; /* Limite la largeur pour éviter de trop longues lignes */
+	margin: 0 auto; /* Centre horizontalement */
+	text-align: justify;
 }
 
-.introchap {
-	cursor: pointer;
-	position: absolute;
-	bottom: 5%;
-	right: 18%;
-	user-select: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	transition: all 0.5s ease-in-out;
+/* ---------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------*/
+#section2 {
+	background-color: #000000; /* Couleur de fond */
+	display: flex;
+	flex-direction: column; /* Empile les éléments verticalement */
+	align-items: center;
+	justify-content: flex-start; /* Aligne le contenu au début de la section */
+	max-width: none;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	color: white;
+	padding: 2rem 5%; /* Espacement intérieur pour éviter que le texte touche les bords */
+}
+#section2 h1 {
+	font-size: clamp(
+		28px,
+		4vw,
+		50px
+	); /* Taille responsive du titre principal */
+	margin-bottom: 25rem; /* Espacement sous le titre, réduit à une valeur raisonnable */
 }
 
-.introchap:hover {
-	transform: scale(1.1);
-	filter: drop-shadow(0 0 10px #7d9cde);
+.ttext {
+	max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
+	margin-bottom: 1.5rem; /* Espacement entre les articles */
+	text-align: justify; /* Aligne le texte des paragraphes à gauche */
+}
+.ttext h3 {
+	font-size: clamp(
+		20px,
+		3vw,
+		32px
+	); /* Taille plus importante des sous-titres */
+	position: relative;
+	top: -20rem; /* Monte le sous-titre */
+	margin-bottom: 0rem;
+	color: #ffffff; /* Couleur accrocheuse pour le sous-titre */
+}
+/* .soust {
+	max-width: 800px; /* Limite la largeur pour une meilleure lisibilité 
+	margin-bottom: 1.5rem; /* Espacement entre les articles 
+	text-align: justify; /* Aligne le texte des paragraphes à gauche 
+} */
+.ttext p,
+ul {
+	margin: 2rem 0;
+	font-size: clamp(
+		14px,
+		1.5vw,
+		20px
+	); /* Taille plus importante des sous-titres */
+	position: relative;
+	top: -20rem; /* Monte le sous-titre */
+	margin-bottom: 0rem;
+	color: #ffffff; /* Couleur accrocheuse pour le sous-titre */
+	text-align: justify;
+}
+.ttext ul {
+	font-size: clamp(14px, 1.5vw, 20px); /* Taille du texte dans la liste */
+	color: #ffffff; /* Couleur du texte dans la liste */
+	margin: 5rem 0; /* Marge autour de la liste */
+	padding-left: 2rem; /* Décalage des puces */
 }
 
-/* On utilise la classe resize pour r  duire la taille de l'image corail */
-.ludique {
-	position: absolute;
-	top: 30%;
-	left: 4%;
-}
-.texte7 {
-	font-family: "SF UI Text", sans-serif;
-	text-align: left;
-	position: absolute;
-	color: #ffffff;
-	left: 4%;
-	width: 50%;
-	font-size: 70%;
-}
-.exploration {
-	position: absolute;
-	top: 50%;
-	right: 2%;
-}
-.texte8 {
-	font-family: "SF UI Text", sans-serif;
-	text-align: right;
-	position: absolute;
-	color: #ffffff;
-	right: 1%;
-	width: 50%;
-    font-size: 70%;
-	top: 60%;
-}
-.quote {
-	font-family: "SF UI Text", sans-serif;
-	text-align: right;
-	position: absolute;
-	color: #ffffff;
-	right: 1%;
-	width: 50%;
-	font-size: 75%;
-	top: 60%;
+.ttext li {
+	margin-bottom: 1rem; /* Espacement entre les éléments de la liste */
 }
 
+/* ---------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------*/
 
-.rounded-gif {
-
-    border-radius: 20px; 
-    max-width: 100%; 
-
-}
-
-.layout {
-
-      padding: 27px;
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-      }
-/* Responsive styles */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .section-wrapper {
-    margin: 10px 5%;
-  }
-
-  .titre {
-    position: static;
-    margin: 10px auto;
-    text-align: center;
-    font-size: 1.8rem;
-    padding: 10px;
-  }
-
-  .texte1, .texte2, .texte3, .texte4, .texte5, .texte6, .texte7, .texte8 {
-    position: static;
-    width: auto;
-    margin: 10px auto;
-    padding: 5%;
-    font-size: 1rem;
-  }
-
-  .accueilimg, .atlantiqueimg, .tunnelimg, .zoneTacticleimg, .Sealifetrustimg {
-    width: 100%;
-    height: auto;
-    margin: 10px 0;
-    display: block;
-  }
-
-  .container_button {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    flex-direction: row;
-  }
-}
-
-@media (max-width: 1024px) {
-  .texte1, .texte2, .texte3, .texte4, .texte5, .texte6, .texte7, .texte8 {
-    width: 80%;
-    font-size: 1.1rem;
-  }
-  .titre {
-    font-size: 2rem;
-  }
-  .accueilimg, .atlantiqueimg, .tunnelimg {
-    width: 90%;
-    margin: 20px auto;
-  }
+#section3 {
+	background-color: #7bff00;
+	display: table;
+	max-width: none;
+	width: 100%;
+	height: 100vh;
 }
