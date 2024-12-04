@@ -1,3 +1,31 @@
+@font-face {
+	font-family: "SF UI";
+	src: url("src/font/san_francisco-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url("https://fonts.cdnfonts.com/css/sf-ui-text-2");
+@font-face {
+	font-family: "Yang Bagus";
+	src: url("src/font/Yang-Bagus.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "SF UI";
+	src: url("src/font/san_francisco-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url("https://fonts.cdnfonts.com/css/sf-ui-text-2");
+@font-face {
+	font-family: "Yang Bagus";
+	src: url("src/font/Yang-Bagus.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
 html {
 	scroll-behavior: smooth;
 }
@@ -26,7 +54,7 @@ body {
 #section1 h1 {
 	font-size: clamp(24px, 4vw, 48px); /* Taille du texte responsive */
 	line-height: 1.4; /* Espacement entre les lignes */
-	color: white;
+	color: rgb(255, 255, 255);
 	margin-bottom: 2rem; /* Espacement plus raisonnable avec le paragraphe */
 }
 
@@ -37,16 +65,23 @@ body {
 		20px
 	); /* Taille responsive pour les paragraphes */
 	line-height: 1.8; /* Améliore la lisibilité du texte */
-	color: #e0e0e0; /* Légère variation pour différencier du titre */
+	color: #ffffff; /* Légère variation pour différencier du titre */
 	max-width: 800px; /* Limite la largeur pour éviter de trop longues lignes */
 	margin: 0 auto; /* Centre horizontalement */
 	text-align: justify;
+	z-index: 1;
 }
 
-/* ---------------------------------------------------------------------------- */
-/* ----------------------------------------------------------------------------*/
+.aquagif {
+	margin: 100px auto; /* Centre horizontalement et descend l'image légèrement */
+	display: block;
+	z-index: -1;
+}
+
+/*==========================================================================================*/
+/*=================================== SECTIONS  2 ==========================================*/
+/*==========================================================================================*/
 #section2 {
-	background-color: #000000; /* Couleur de fond */
 	display: flex;
 	flex-direction: column; /* Empile les éléments verticalement */
 	align-items: center;
@@ -58,63 +93,73 @@ body {
 	color: white;
 	padding: 2rem 5%; /* Espacement intérieur pour éviter que le texte touche les bords */
 }
+
 #section2 h1 {
 	font-size: clamp(
 		28px,
 		4vw,
 		50px
 	); /* Taille responsive du titre principal */
-	margin-bottom: 25rem; /* Espacement sous le titre, réduit à une valeur raisonnable */
+	margin-bottom: 3rem; /* Espacement sous le titre ajusté */
 }
 
 .ttext {
-	max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
+	max-width: 70%; /* Limite la largeur pour une meilleure lisibilité */
 	margin-bottom: 1.5rem; /* Espacement entre les articles */
 	text-align: justify; /* Aligne le texte des paragraphes à gauche */
 }
+
 .ttext h3 {
 	font-size: clamp(
 		20px,
 		3vw,
 		32px
 	); /* Taille plus importante des sous-titres */
-	position: relative;
-	top: -20rem; /* Monte le sous-titre */
-	margin-bottom: 0rem;
+	margin-bottom: 1.5rem; /* Espacement entre le sous-titre et le texte */
 	color: #ffffff; /* Couleur accrocheuse pour le sous-titre */
 }
-/* .soust {
-	max-width: 800px; /* Limite la largeur pour une meilleure lisibilité 
-	margin-bottom: 1.5rem; /* Espacement entre les articles 
-	text-align: justify; /* Aligne le texte des paragraphes à gauche 
-} */
-.ttext p,
-ul {
-	margin: 2rem 0;
-	font-size: clamp(
-		14px,
-		1.5vw,
-		20px
-	); /* Taille plus importante des sous-titres */
-	position: relative;
-	top: -20rem; /* Monte le sous-titre */
-	margin-bottom: 0rem;
-	color: #ffffff; /* Couleur accrocheuse pour le sous-titre */
-	text-align: justify;
+
+.ttext p {
+	font-family: "SF UI Text", sans-serif;
+	font-size: clamp(14px, 1.5vw, 20px); /* Taille du texte des paragraphes */
+	margin-bottom: 1.5rem; /* Espacement entre les paragraphes */
+	color: #ffffff; /* Couleur du texte des paragraphes */
+	line-height: 1.6; /* Hauteur de ligne pour améliorer la lisibilité */
 }
+
 .ttext ul {
+	font-family: "SF UI Text", sans-serif;
+
 	font-size: clamp(14px, 1.5vw, 20px); /* Taille du texte dans la liste */
 	color: #ffffff; /* Couleur du texte dans la liste */
-	margin: 5rem 0; /* Marge autour de la liste */
+	margin: 2rem 0; /* Marge autour de la liste */
 	padding-left: 2rem; /* Décalage des puces */
 }
 
 .ttext li {
 	margin-bottom: 1rem; /* Espacement entre les éléments de la liste */
 }
+.ttext2 {
+	font-family: "SF UI Text", sans-serif;
+	position: relative; /* Assure que le texte a un contexte de positionnement */
+}
 
-/* ---------------------------------------------------------------------------- */
-/* ----------------------------------------------------------------------------*/
+.tips1 {
+	position: absolute; /* Permet de positionner l'image par rapport à son parent */
+	width: 45%; /* Ajuste la largeur de l'image */
+	margin-left: 35rem;
+	height: auto; /* Conserve les proportions de l'image */
+	margin-top: 2rem; /* Déplace l'image légèrement vers le haut */
+}
+.tips1:hover {
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 10px #000000);
+	transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/*==========================================================================================*/
+/*=================================== SECTIONS  3 ==========================================*/
+/*==========================================================================================*/
 
 #section3 {
 	background-color: #7bff00;
