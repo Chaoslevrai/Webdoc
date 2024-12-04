@@ -129,7 +129,6 @@ body {
 
 .ttext ul {
 	font-family: "SF UI Text", sans-serif;
-
 	font-size: clamp(14px, 1.5vw, 20px); /* Taille du texte dans la liste */
 	color: #ffffff; /* Couleur du texte dans la liste */
 	margin: 2rem 0; /* Marge autour de la liste */
@@ -139,6 +138,7 @@ body {
 .ttext li {
 	margin-bottom: 1rem; /* Espacement entre les éléments de la liste */
 }
+
 .ttext2 {
 	font-family: "SF UI Text", sans-serif;
 	position: relative; /* Assure que le texte a un contexte de positionnement */
@@ -155,6 +155,96 @@ body {
 	transform: scale(1.1);
 	filter: drop-shadow(0 0 10px #000000);
 	transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+	/* For medium to large screens (e.g., tablets, small laptops) */
+	.tips1 {
+		width: 60%; /* Decrease image size */
+		margin-left: 25rem; /* Adjust position */
+		margin-top: 3rem; /* Adjust image positioning */
+	}
+
+	.ttext {
+		max-width: 80%; /* Increase width of text content */
+	}
+
+	.ttext h3 {
+		font-size: clamp(18px, 4vw, 28px); /* Adjust subtitle size */
+	}
+}
+
+@media screen and (max-width: 768px) {
+	/* For tablets or smaller screens */
+	#section2 {
+		padding: 2rem 3%; /* Adjust padding for smaller screens */
+	}
+
+	.tips1 {
+		width: 80%; /* Image takes more width on smaller screens */
+		margin-left: 0; /* Center the image */
+		margin-top: 2rem; /* Adjust image position */
+	}
+
+	.ttext {
+		max-width: 90%; /* Expand text area for readability */
+	}
+
+	.ttext h1 {
+		font-size: clamp(
+			22px,
+			6vw,
+			40px
+		); /* Adjust title size for smaller screens */
+		margin-bottom: 2rem;
+	}
+
+	.ttext h3 {
+		font-size: clamp(16px, 5vw, 24px); /* Adjust subtitle size */
+	}
+
+	.ttext p {
+		font-size: clamp(12px, 3vw, 18px); /* Adjust paragraph size */
+	}
+
+	.ttext ul {
+		font-size: clamp(12px, 3vw, 18px); /* Adjust list size */
+	}
+}
+
+@media screen and (max-width: 480px) {
+	/* For mobile screens */
+	#section2 {
+		padding: 2rem 2%; /* Reduce padding for smaller screens */
+	}
+
+	.tips1 {
+		width: 100%; /* Make the image full-width */
+		margin-left: 0; /* Center image */
+		margin-top: 1.5rem; /* Adjust top margin */
+	}
+
+	.ttext {
+		max-width: 100%; /* Full-width text area */
+	}
+
+	.ttext h1 {
+		font-size: clamp(20px, 8vw, 30px); /* Adjust title size */
+		margin-bottom: 1.5rem;
+	}
+
+	.ttext h3 {
+		font-size: clamp(14px, 6vw, 22px); /* Adjust subtitle size */
+	}
+
+	.ttext p {
+		font-size: clamp(12px, 4vw, 16px); /* Adjust paragraph size */
+	}
+
+	.ttext ul {
+		font-size: clamp(12px, 4vw, 16px); /* Adjust list size */
+	}
 }
 
 /*==========================================================================================*/
