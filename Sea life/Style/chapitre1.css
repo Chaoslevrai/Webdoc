@@ -27,119 +27,361 @@
 	font-style: normal;
 }
 
-html,
-body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	overflow: auto;
-	color: #ffffff;
-}
-
 .titre {
 	font-family: "Yang Bagus", sans-serif;
-	text-align: left;
-	font-size: 2em;
-	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	padding: 25px;
-}
-
-.soustitre {
-	font-family: "Yang Bagus", sans-serif;
-	text-align: left;
-	font-size: 1.5em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 17px;
-}
-
-.rounded-gif {
-	border-radius: 20px;
-	max-width: 100%;
-}
-.retour {
+	align-items: flex-start;
 	position: absolute;
-	top: 30px;
-	left: 2%;
-	color: #ffffff;
-	font-weight: lighter;
-	cursor: pointer;
-	animation: moveLeftRight 0.5s ease-in-out infinite alternate;
+	top: 35%;
+	left: 0;
+	background-color: #222222;
+	padding: 1%;
+	transform: translate(0, -50%);
+	text-align: left;
 }
-
-.salegentil {
-	padding: 25px;
-	transform: scale(55%);
-	margin-left: 15%;
-	margin-right: auto;
-	max-width: 200px;
-	display: block;
+.auteur {
+	text-align: left;
+	margin-left: 10px;
+	position: absolute;
+	bottom: 55%;
+	left: 1%;
 }
-
-.layout {
-	padding: 27px;
-	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	grid-template-columns: repeat(2, 1fr);
-	gap: 8px;
-}
-
-.layout2 {
-	padding: 27px;
-	display: grid;
-	grid-template-rows: repeat(2, 1fr);
-	grid-template-columns: repeat(2, 1fr);
-	gap: 8px;
-}
-
 .texte1 {
-	max-width: 750px;
+	padding: -10%;
 	font-family: "SF UI Text", sans-serif;
-	margin-left: 1%;
-	padding: 20px;
 	text-align: left;
-	font-size: 1.1rem; /* Evite d'utiliser des unités trop grandes comme % */
-	line-height: 1.5;
+	margin-left: 10px;
+	position: absolute;
+	bottom: 10%;
+	left: 1%;
+	width: 60%;
+	font-size: 70%;
+}
+/* les classe titre, auteur, texte1 et plonge sont utilis  s pour le chapitre 1, il s'agit de la pr sentation de l'Atlantique, du tunnel oceanique et de la m duse */
+
+.accueilimg {
+	height: 45%;
+	margin-left: 50%;
+	margin-top: -18%;
+	border-radius: 5%;
 }
 
-.immersion {
-	max-width: 750px;
-	margin-left: 1%;
-	padding: 20px;
 
-	text-align: center;
+.zoneTacticleimg {
+	height: 50%;
+	margin-left: 50%;
+	margin-top: -15%;
+	border-radius: 5%;
+	
 }
-.cool {
-	margin-left: 3%;
+
+
+.Sealifetrustimg {
+	height: 50%;
+	margin-right: 50%;
+	margin-top: 20%;
+	border-radius: 5%;
+	
+}
+
+
+
+.plonge {
+	padding: 20%;
 	text-align: left;
-	font-size: 1.5em;
+	margin-left: -20%;
+	position: absolute;
+	
+	left: 1%;
 }
 
-.vocation {
-	max-width: 750px;
-	margin-right: 0;
-	padding: 20px;
-	text-align: center;
-	float: right;
+.section {
+	position: relative;
 }
-
-.genial {
-	margin-right: 1%;
-	font-size: 1.5em;
-}
-
-.requin {
-	transform: scale(110%);
+.atlantique {
+	position: absolute;
+	bottom: 70%;
+	left: 47%;
+	width: 50%;
 }
 .texte2 {
 	font-family: "SF UI Text", sans-serif;
 	text-align: left;
-	font-size: 1.1rem; /* Evite d'utiliser des unités trop grandes comme % */
-	line-height: 1.5;
+	margin-left: 10px;
+	position: absolute;
+	color: #ffffff;
+	bottom: 20%;
+	left: 49%;
+	width: 50%;
+	font-size: 70%;
 }
-.gif-container img {
-	width: 300px;
+
+
+/* les classe titre, auteur, texte1 et plonge sont utilis  s pour le chapitre 1, il s'agit de la pr sentation de l'Atlantique, du tunnel oceanique et de la m duse */
+
+.tunnel {
+	position: absolute;
+	bottom: 60%;
+	left: 0.8%;
+}
+.texte3 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	margin-left: 10px;
+	position: absolute;
+	color: #ffffff;
+	bottom: 20%;
+	left: 0%;
+	width: 70%;
+	font-size: 70%;
+}
+/* les classe titre, auteur, texte1 et plonge sont utilis  s pour le chapitre 1, il s'agit de la pr sentation de l'Atlantique, du tunnel oceanique et de la m duse */
+.récifs {
+	position: absolute;
+	bottom: 70%;
+	left: 42%;
+	width: 50%;
+}
+.texte4 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	position: absolute;
+	color: #ffffff;
+	bottom: 20%;
+	left: 45%;
+	width: 50%;
+	height: auto;
+	z-index: 1;
+	font-size: 70%;
+}
+.corail {
+	position: absolute;
+	bottom: 10%;
+	right: 0%;
+	width: 15%;
+}
+.corailimg {
+	position: absolute;
+	bottom: 35%;
+	right: 60%;
+	width: 30%;
+}
+
+.tunnelimg {
+	height: 35%;
+	margin-left: 60%;
+	margin-top: -25%;
+	border-radius: 5%;
+}
+
+.atlantiqueimg {
+	height: 70%;
+	margin-right: 50%;
+	margin-top: 3%;
+	border-radius: 5%;
+}
+
+
+.resize {
+	position: absolute;
+	bottom: 72%;
+	right: 57%;
+	width: 10%;
+	cursor: pointer;
+}
+/* On utilise la classe resize pour r  duire la taille de l'image corail */
+.polaire {
+	position: absolute;
+	top: 14%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.texte5 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	margin-left: 10px;
+	position: absolute;
+	color: #ffffff;
+	bottom: 20%;
+	left: 50%;
+	width: 70%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	font-size: 70%;
+}
+.decorimg {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	bottom: 0%;
+}
+
+.neige {
+	position: absolute;
+	width: 5%;
+	top: 19%;
+	z-index: 2;
+	right: 15%;
+}
+/* On utilise la classe resize pour r  duire la taille de l'image corail */
+.foret {
+	position: absolute;
+	top: 30%;
+	left: 2%;
+}
+.texte6 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	position: absolute;
+	color: #ffffff;
+	left: 2%;
+	width: 50%;
+	font-size: 70%;
+}
+.amazone {
+	position: absolute;
+	width: 30%;
+	top: 4%;
+	right: 5%;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.html.body{
+	overflow: auto;
+}
+
+.introchap {
+	cursor: pointer;
+	position: absolute;
+	bottom: 5%;
+	right: 18%;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	transition: all 0.5s ease-in-out;
+}
+
+.introchap:hover {
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 10px #7d9cde);
+}
+
+/* On utilise la classe resize pour r  duire la taille de l'image corail */
+.ludique {
+	position: absolute;
+	top: 30%;
+	left: 4%;
+}
+.texte7 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: left;
+	position: absolute;
+	color: #ffffff;
+	left: 4%;
+	width: 50%;
+	font-size: 70%;
+}
+.exploration {
+	position: absolute;
+	top: 50%;
+	right: 2%;
+}
+.texte8 {
+	font-family: "SF UI Text", sans-serif;
+	text-align: right;
+	position: absolute;
+	color: #ffffff;
+	right: 1%;
+	width: 50%;
+    font-size: 70%;
+	top: 60%;
+}
+.quote {
+	font-family: "SF UI Text", sans-serif;
+	text-align: right;
+	position: absolute;
+	color: #ffffff;
+	right: 1%;
+	width: 50%;
+	font-size: 75%;
+	top: 60%;
+}
+
+
+.rounded-gif {
+
+    border-radius: 20px; 
+    max-width: 100%; 
+
+}
+
+.layout {
+
+      padding: 27px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+/* Responsive styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .section-wrapper {
+    margin: 10px 5%;
+  }
+
+  .titre {
+    position: static;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+
+  .texte1, .texte2, .texte3, .texte4, .texte5, .texte6, .texte7, .texte8 {
+    position: static;
+    width: auto;
+    margin: 10px auto;
+    padding: 5%;
+    font-size: 1rem;
+  }
+
+  .accueilimg, .atlantiqueimg, .tunnelimg, .zoneTacticleimg, .Sealifetrustimg {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    display: block;
+  }
+
+  .container_button {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1024px) {
+  .texte1, .texte2, .texte3, .texte4, .texte5, .texte6, .texte7, .texte8 {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+  .titre {
+    font-size: 2rem;
+  }
+  .accueilimg, .atlantiqueimg, .tunnelimg {
+    width: 90%;
+    margin: 20px auto;
+  }
 }
