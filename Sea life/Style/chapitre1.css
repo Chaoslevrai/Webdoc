@@ -53,7 +53,7 @@
 	text-align: left;
 	margin-left: 10px;
 	position: absolute;
-	bottom: 19%;
+	bottom: 5%;
 	left: 1%;
 	width: 60%;
 	font-size: 70%;
@@ -111,7 +111,7 @@
 	margin-left: 10px;
 	position: absolute;
 	color: #ffffff;
-	bottom: 35%;
+	bottom: 20%;
 	left: 49%;
 	width: 50%;
 	font-size: 70%;
@@ -122,7 +122,7 @@
 
 .tunnel {
 	position: absolute;
-	bottom: 60%;
+	bottom: 80%;
 	left: 0.8%;
 }
 .texte3 {
@@ -131,9 +131,9 @@
 	margin-left: 10px;
 	position: absolute;
 	color: #ffffff;
-	bottom: 30%;
+	bottom: 40%;
 	left: 0%;
-	width: 70%;
+	width: 60%;
 	font-size: 70%;
 }
 /* les classe titre, auteur, texte1 et plonge sont utilis  s pour le chapitre 1, il s'agit de la pr sentation de l'Atlantique, du tunnel oceanique et de la m duse */
@@ -193,8 +193,8 @@
 
 .tunnelimg {
 	height: 35%;
-	margin-left: 50%;
-	margin-top: -25%;
+	margin-left: 65%;
+	margin-top: -15%;
 	border-radius: 5%;
 }
 
