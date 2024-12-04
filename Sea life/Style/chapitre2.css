@@ -43,8 +43,81 @@ body {
 	text-align: justify;
 }
 
+/* ---------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------*/
 #section2 {
-	background-color: #0062ff;
+	background-color: #000000; /* Couleur de fond */
+	display: flex;
+	flex-direction: column; /* Empile les éléments verticalement */
+	align-items: center;
+	justify-content: flex-start; /* Aligne le contenu au début de la section */
+	max-width: none;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	color: white;
+	padding: 2rem 5%; /* Espacement intérieur pour éviter que le texte touche les bords */
+}
+#section2 h1 {
+	font-size: clamp(
+		28px,
+		4vw,
+		50px
+	); /* Taille responsive du titre principal */
+	margin-bottom: 25rem; /* Espacement sous le titre, réduit à une valeur raisonnable */
+}
+
+.ttext {
+	max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
+	margin-bottom: 1.5rem; /* Espacement entre les articles */
+	text-align: justify; /* Aligne le texte des paragraphes à gauche */
+}
+.ttext h3 {
+	font-size: clamp(
+		20px,
+		3vw,
+		32px
+	); /* Taille plus importante des sous-titres */
+	position: relative;
+	top: -20rem; /* Monte le sous-titre */
+	margin-bottom: 0rem;
+	color: #ffffff; /* Couleur accrocheuse pour le sous-titre */
+}
+/* .soust {
+	max-width: 800px; /* Limite la largeur pour une meilleure lisibilité 
+	margin-bottom: 1.5rem; /* Espacement entre les articles 
+	text-align: justify; /* Aligne le texte des paragraphes à gauche 
+} */
+.ttext p,
+ul {
+	margin: 2rem 0;
+	font-size: clamp(
+		14px,
+		1.5vw,
+		20px
+	); /* Taille plus importante des sous-titres */
+	position: relative;
+	top: -20rem; /* Monte le sous-titre */
+	margin-bottom: 0rem;
+	color: #ffffff; /* Couleur accrocheuse pour le sous-titre */
+	text-align: justify;
+}
+.ttext ul {
+	font-size: clamp(14px, 1.5vw, 20px); /* Taille du texte dans la liste */
+	color: #ffffff; /* Couleur du texte dans la liste */
+	margin: 5rem 0; /* Marge autour de la liste */
+	padding-left: 2rem; /* Décalage des puces */
+}
+
+.ttext li {
+	margin-bottom: 1rem; /* Espacement entre les éléments de la liste */
+}
+
+/* ---------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------*/
+
+#section3 {
+	background-color: #7bff00;
 	display: table;
 	max-width: none;
 	width: 100%;
