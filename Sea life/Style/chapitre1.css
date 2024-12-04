@@ -142,7 +142,17 @@
 	bottom: 70%;
 	left: 42%;
 	width: 50%;
+	right: 2%;
 }
+
+
+
+
+
+
+
+
+
 .texte4 {
 	font-family: "SF UI Text", sans-serif;
 	text-align: left;
@@ -151,10 +161,23 @@
 	bottom: 35%;
 	left: 45%;
 	width: 50%;
-	height: auto;
 	z-index: 1;
-	font-size: 70%;
+	font-size: 60%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .corail {
 	position: absolute;
 	bottom: 10%;
