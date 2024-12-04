@@ -426,3 +426,21 @@
     margin: 20px auto;
   }
 }
+
+
+
+
+
+.backgrounbody {
+
+
+    transform: scale(55%);
+
+    background-repeat: no-repeat;
+    background-size: auto;
+    opacity: 0.3;
+    position: fixed;
+    top: -125%; 
+    left: -45%;
+    z-index: -1;
+}
