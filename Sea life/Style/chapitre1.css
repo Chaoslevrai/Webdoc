@@ -208,12 +208,12 @@
 .texte5 {
 	font-family: "SF UI Text", sans-serif;
 	text-align: left;
-	margin-left: 10px;
+	
 	position: absolute;
 	color: #ffffff;
-	bottom: 45%;
+	
 	left: 50%;
-	width: 70%;
+	width: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 1;
 	font-size: 60%;
