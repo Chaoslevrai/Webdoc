@@ -48,7 +48,7 @@ body {
 	height: 100vh; /* Hauteur complète de la fenêtre */
 	text-align: center;
 	position: relative; /* Permet des ajustements de position */
-	top: -5%; /* Ajuste la position verticale */
+	top: 0; /* Aucun décalage vertical */
 	padding: 0 5%; /* Ajoute un peu de marge intérieure sur les côtés */
 }
 
@@ -57,6 +57,8 @@ body {
 	line-height: 1.4; /* Espacement entre les lignes */
 	color: rgb(255, 255, 255);
 	margin-bottom: 2rem; /* Espacement plus raisonnable avec le paragraphe */
+	position: relative; /* Permet des ajustements de position */
+	top: 15%; /* Ajuste la position verticale */
 }
 
 .description {
@@ -70,6 +72,8 @@ body {
 	max-width: 800px; /* Limite la largeur pour éviter de trop longues lignes */
 	margin: 0 auto; /* Centre horizontalement */
 	text-align: justify;
+	position: relative; /* Permet des ajustements de position */
+	top: 10%; /* Ajuste la position verticale */
 	z-index: 1;
 }
 
@@ -77,6 +81,8 @@ body {
 	margin: 100px auto; /* Centre horizontalement et descend l'image légèrement */
 	display: block;
 	z-index: -1;
+	top: -10%;
+	position: relative;
 	max-width: 100%; /* Ensure the image is responsive */
 	height: auto; /* Maintain aspect ratio */
 }
@@ -674,4 +680,80 @@ p {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
+}
+/*==========================================================================================*/
+/*=================================== SECTIONS  6 ==========================================*/
+/*==========================================================================================*/
+#section6 {
+	display: flex; /* Utilise Flexbox pour centrer */
+	flex-direction: column; /* Organise les enfants verticalement */
+	align-items: center; /* Centre horizontalement */
+	justify-content: center; /* Centre verticalement */
+	max-width: none;
+	width: 100%;
+	height: 100vh; /* Hauteur complète de la fenêtre */
+	text-align: center;
+	position: relative; /* Permet des ajustements de position */
+	top: -5%; /* Ajuste la position verticale */
+	padding: 0 5%; /* Ajoute un peu de marge intérieure sur les côtés */
+}
+
+#section6 h1 {
+	font-size: clamp(24px, 4vw, 48px); /* Taille du texte responsive */
+	line-height: 1.4; /* Espacement entre les lignes */
+	color: rgb(255, 255, 255);
+	margin-bottom: 2rem; /* Espacement plus raisonnable avec le paragraphe */
+}
+
+.cc {
+	font-size: clamp(
+		14px,
+		1.5vw,
+		20px
+	); /* Taille responsive pour les paragraphes */
+	line-height: 1.8; /* Améliore la lisibilité du texte */
+	color: #ffffff; /* Légère variation pour différencier du titre */
+	max-width: 800px; /* Limite la largeur pour éviter de trop longues lignes */
+	margin: 0 auto; /* Centre horizontalement */
+	text-align: justify;
+	z-index: 1;
+}
+section {
+	display: flex;
+	justify-content: space-between; /* Permet de mettre de l'espace entre les chapitres */
+	align-items: center; /* Aligne verticalement les éléments */
+	gap: 10vw; /* Ajoute un espacement entre les deux chapitres */
+	padding: 10vh 5vw; /* Ajoute un peu de padding pour les marges */
+}
+
+.chapitre1,
+.chapitre3 {
+	background-color: #ffffff;
+	border-radius: 50%;
+	width: 20vw;
+	height: 20vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5vw;
+	flex-direction: column;
+	text-align: center;
+	gap: 0.2vh;
+}
+
+.chapitre1 h1,
+.chapitre3 h1 {
+	color: #000000;
+}
+
+.historique,
+.chapitre3 {
+	font-size: 0.8em; /* Style pour le texte "Historique" */
+	color: #000;
+}
+
+.auteur,
+.chapitre3 {
+	font-size: 0.6em; /* Style pour le texte de l’auteur */
+	color: #000000; /* Couleur plus sombre pour contraste */
 }
