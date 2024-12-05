@@ -1,38 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Chapitre 1</title>
 		<link
-			href="https://fonts.cdnfonts.com/css/sf-ui-text-2"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
 		/>
 
 		<link rel="stylesheet" href="Style/chapitre1.css" />
-		<!-- <link rel="stylesheet" href="Style/Index.css" /> -->
-		<link rel="stylesheet" href="Style/style.css" />
-		<title>Chapitre 1</title>
 	</head>
+
 	<body>
+		<div class="retour">
+			<svg
+				onclick="window.location.href = 'index.html';"
+				width="57"
+				height="28"
+				viewBox="0 0 57 28"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M13.9473 13.9473H52.9999"
+					stroke="white"
+					stroke-width="7"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+				<path
+					d="M18.5263 25.9515L1.72046 13.9474L18.5263 1.94319V25.9515ZM0.866045 14.5577L0.866798 14.5571C0.866546 14.5573 0.866295 14.5575 0.866043 14.5577L0.430116 13.9474L0.866045 14.5577Z"
+					fill="white"
+					stroke="white"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>
+			<p>Retour</p>
+		</div>
 
+		<div
+			class="container-fluid d-flex justify-content-start align-items-center vh-100"
+		>
+			<!--PREMIER-->
+			<div class="row">
+				<div class="col-md-6">
+					<h1
+						style="
+							background-color: #222222;
+							width: 330px;
+							text-align: center;
+						"
+					>
+						Chapitre 1
+					</h1>
 
-		<div class="background">
-			<img src="src/img/background.png" alt="background">
-			
-			</div>
+					<h3>Ecrit par Youness</h3>
 
-		
-
-
-		<div class="section-wrapper">
-			<section class="section" id="section1">
-				<div class="titre">
-					<h2>Chapitre 1</h2>
-				</div>
-				<p class="auteur">ecrit par Youness</p>
-				<h3 class="plonge">Une plongee au coeur de SEA LIFE</h3>
-				<div class="texte1">
+					<h2 style="width: 1100px">
+						Une plongee au coeur de SEA LIFE
+					</h2>
 					<p>
 						Depuis 2001, SEA LIFE Paris Val d’Europe accueille ses
 						visiteurs dans un espace dédié à la découverte des
@@ -49,19 +80,34 @@
 						questionner et parfois même à réfléchir.
 					</p>
 				</div>
-				<img
-					class="accueilimg"
-					src="src/img/accueilimg.jpg"
-					alt="accueilphoto"
-				/>
-			</section>
+				<div class="col-md-6">
+					<img
+						class="img-fluid w-70"
+						src="src/img/accueilimg.jpg"
+						alt="accueilphoto"
+					/>
+				</div>
+			</div>
 		</div>
-		<div class="section-wrapper">
-			<section class="section" id="section2">
-				<h3 class="atlantique">
-					Ocean atlantique : Une entree en matiere
-				</h3>
-				<div class="texte2">
+
+		<!--DEUXIEME-->
+		<div class="container-fluid vh-100">
+			<div class="row align-items-center">
+				<!-- Image -->
+				<div class="col-md-6">
+					<img
+						class="img-fluid rounded-5"
+						src="src/img/atlantiqueimg.jpg"
+						alt="atlantiquephoto"
+					/>
+				</div>
+
+				<!-- Contenu (Titre + Paragraphe) -->
+				<div class="col-md-6 d-flex flex-column">
+					<!--Classe d-flex flex-column : Utilisée pour empiler le contenu verticalement (le <h2> au-dessus du <p>)-->
+					<h2 class="mb-4">
+						Ocean atlantique : Une entree en matiere
+					</h2>
 					<p>
 						La visite débute par les eaux mystérieuses de
 						l’Atlantique. Les bassins sombres mettent en valeur les
@@ -78,23 +124,27 @@
 						dans ces eaux profondes.
 					</p>
 				</div>
-				<img
-					class="atlantiqueimg"
-					src="src/img/atlantiqueimg.jpg"
-					alt="atlantiquephoto"
-				/>
-			</section>
+			</div>
 		</div>
+		<!--FIN DEUXIEME-->
 
+		<!--Trosième-->
 
+		<div class="container-fluid vh-100">
+			<div class="row align-items-center flex-row-reverse">
+				<!-- Image -->
+				<div class="col-md-6">
+					<img
+						class="img-fluid w-60 mx-5"
+						src="src/img/Tunnelimg.jpg"
+						alt="tunnelphoto"
+					/>
+				</div>
 
-
-		<div class="section-wrapper">
-			<section class="section" id="section3">
-				<h3 class="tunnel">
-					Le tunnel oceanique : Un passage spectaculaire
-				</h3>
-				<div class="texte3">
+				<!-- Contenu (Titre + Paragraphe) -->
+				<div class="col-md-6 d-flex flex-column">
+					<!--Classe d-flex flex-column : Utilisée pour empiler le contenu verticalement (le <h2> au-dessus du <p>)-->
+					<h2>Le tunnel occeanique : un passage spectaculaire</h2>
 					<p>
 						Le tunnel en verre est sans doute l’un des moments forts
 						de la visite. En traversant cet espace, on a
@@ -109,54 +159,30 @@
 						dans leur environnement.
 					</p>
 				</div>
-
-				<img
-					class="tunnelimg"
-					src="src/img/Tunnelimg.jpg"
-					alt="tunnelphoto"
-				/>
-			</section>
-
-
-
-
-
-
-
-
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			</div>
 		</div>
-		<div class="section-wrapper">
-			<section class="section" id="section4">
-				<h3 class="récifs">Les recifs coralliens : Un jardin de couleurs</h3>
-				<div class="texte4">
+
+		<!-- Fin Trosième-->
+
+		<!--Quatrieme-->
+
+		<div class="container-fluid vh-100 mb-5">
+			<div class="row">
+				<!-- Image -->
+				<div class="col-md-6">
+					<img
+						class="img-fluid"
+						src="src/img/corailimg.png"
+						alt="pirate"
+					/>
+				</div>
+
+				<!-- Contenu (Titre + Paragraphe) -->
+				<div class="col-md-6 d-flex flex-column">
+					<!--Classe d-flex flex-column : Utilisée pour empiler le contenu verticalement (le <h2> au-dessus du <p>)-->
+					<h2 class="mb-4">
+						Les recifs coralliens : Un jardin de couleurs
+					</h2>
 					<p>
 						L’espace dédié aux récifs coralliens contraste
 						totalement avec l’Atlantique. Ici, tout est éclatant :
@@ -170,23 +196,24 @@
 						rappelle aussi la fragilité de ces écosystèmes,
 						gravement menacés par les activités humaines.
 					</p>
+					<div class="corail">
+						<img
+							class="img-fluid float-end"
+							src="src/img/corail.png"
+							alt="corail"
+						/>
+					</div>
 				</div>
-				<img class="corail" src="src/img/corail.png" alt="corail" />
-				<img
-					class="corailimg"
-					src="src/img/corailimg.png"
-					alt="corailphoto"
-				/>
-				
-			</section>
+			</div>
 		</div>
 
-		<div class="section-wrapper">
-			<section class="section" id="section5">
-				<h3 class="polaire">
-					L’Habitat polaire : Un refroidissement brutal
-				</h3>
-				<div class="texte5">
+		<!--FIN Quatrieme-->
+
+		<!--Cinquieme-->
+		<div class="container-fluid vh-100 mb-5">
+			<div class="row">
+				<div class="col-md-12 align-items-center d-flex flex-column">
+					<h2>L’Habitat polaire : Un refroidissement brutal</h2>
 					<p>
 						En entrant dans la zone polaire, le décor change
 						radicalement. La température chute, et l’on se retrouve
@@ -201,18 +228,35 @@
 						confrontés dans la nature.
 					</p>
 				</div>
-				<img class="decorimg" src="src/img/decor.png" alt="" />
-				<img class="neige" src="src/img/neige.png" alt="neige" />
-			</section>
+				<div class="col-md-12 align-items-center d-flex">
+					<img class="img-fluid" src="src/img/decor.png" alt="" />
+				</div>
+			</div>
 		</div>
 
-		<div class="section-wrapper">
-			<section class="section" id="section2">
-				<h3 class="ludique">
-					La foret Amazonienne : Une ambiance tropicale
-				</h3>
-				<div class="texte7">
-					<p>
+		<!--Fin Cinquieme-->
+
+		<!--Sixieme-->
+
+		<div class="container-fluid vh-100">
+			<div class="row align-items-center flex-row-reverse">
+				<!-- Image -->
+				<div class="col-md-6">
+					<img
+						id="amazone"
+						class="img-fluid"
+						src="src/img/amazone.png"
+						alt="amazone"
+					/>
+				</div>
+
+				<!-- Contenu (Titre + Paragraphe) -->
+				<div class="col-md-6 d-flex flex-column">
+					<!--Classe d-flex flex-column : Utilisée pour empiler le contenu verticalement (le <h2> au-dessus du <p>)-->
+					<h2 class="mx-5">
+						La foret Amazonienne : Une ambiance tropicale
+					</h2>
+					<p class="mx-5">
 						Dans la section amazonienne, la chaleur et l’humidité
 						contrastent avec la zone précédente. On y découvre des
 						espèces d’eau douce typiques de la région, comme les
@@ -222,15 +266,27 @@
 						richesse de la biodiversité saute aux yeux.
 					</p>
 				</div>
-				<img class="amazone" src="src/img/amazone.png" alt="" />
-			</section>
+			</div>
 		</div>
 
-		<div class="section-wrapper">
-			<section class="section" id="section2">
-				<h3 class="ludique">Une zone tactile et ludique</h3>
-				<div class="texte7">
-					<p>
+		<!--Septieme-->
+
+		<div class="container-fluid vh-100">
+			<div class="row align-items-center flex-row-reverse">
+				<!-- Image -->
+				<div class="col-md-6">
+					<img
+						class="img-fluid rounded-5"
+						src="src/img/zoneTacticleimg.jpg"
+						alt=""
+					/>
+				</div>
+
+				<!-- Contenu (Titre + Paragraphe) -->
+				<div class="col-md-6 d-flex flex-column">
+					<!--Classe d-flex flex-column : Utilisée pour empiler le contenu verticalement (le <h2> au-dessus du <p>)-->
+					<h2 class="mx-5">Une zone tactile et ludique</h2>
+					<p class="mx-5">
 						SEA LIFE propose également une zone tactile, où les
 						visiteurs peuvent toucher des étoiles de mer et d’autres
 						créatures marines. <br /><br />
@@ -239,19 +295,28 @@
 						marine.
 					</p>
 				</div>
-				<img
-					class="zoneTacticleimg"
-					src="src/img/zoneTacticleimg.jpg"
-					alt=""
-				/>
-			</section>
+			</div>
 		</div>
 
-		<div class="section-wrapper">
-			<section class="section" id="section2">
-				<h3 class="exploration">Une exploration educative</h3>
-				<div class="texte8">
-					<p>
+		<!--FIN Septieme-->
+
+		<!--Huitieme-->
+		<div class="container-fluid vh-100">
+			<div class="row">
+				<!-- Image -->
+				<div class="col-md-6">
+					<img
+						class="img-fluid mx-5 rounded-5"
+						src="src/img/Sealifetrustimg.jpg"
+						alt="EDU"
+					/>
+				</div>
+
+				<!-- Contenu (Titre + Paragraphe) -->
+				<div class="col-md-6 d-flex flex-column">
+					<!--Classe d-flex flex-column : Utilisée pour empiler le contenu verticalement (le <h2> au-dessus du <p>)-->
+					<h2 class="mb-4 mx-5">Une exploration educative</h2>
+					<p class="mx-5">
 						Au fil de la visite, on comprend que SEA LIFE ne se
 						limite pas à montrer des espèces : l’aquarium met
 						également en avant des messages éducatifs. Les efforts
@@ -263,46 +328,82 @@
 						pour contribuer à leur préservation
 					</p>
 				</div>
-				<img
-					class="Sealifetrustimg"
-					src="src/img/Sealifetrustimg.jpg"
-					alt=""
-				/>
-			</section>
+			</div>
 		</div>
 
+		<!--FIN Huitieme-->
 
+		<!--Bouton suivant/pre-->
+		<div class="container-fluid">
+			<div class="row">
+				<div
+					class="col-md-6 align-items-center justify-content-start mx-auto"
+				>
+					<!--chapitre 2-->
+					<div class="chapitre2 float-start">
+						<h1>Accueil</h1>
+						<svg
+							onclick="window.location.href = 'index.html';"
+							class="introchap"
+							width="72"
+							height="72"
+							viewBox="0 0 72 72"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect
+								width="72"
+								height="72"
+								rx="36"
+								fill="#7D9CDE"
+							/>
+							<path
+								d="M44.9656 32.8993L30.8111 25.822C28.218 24.5255 25.167 26.4111 25.167 29.3103V42.6896C25.167 45.5888 28.218 47.4745 30.8111 46.1779L44.9656 39.1007C47.5207 37.8231 47.5207 34.1768 44.9656 32.8993Z"
+								fill="#001858"
+							/>
+						</svg>
+					</div>
+				</div>
+				<!--FIN chapitre 2-->
 
-
-
-		<!--chapitre 2-->
-		<div class="chapitre2 float-start">
-			<h1>Chapitre 2 :</h1>
-			<p class="historique">Les Secrets sous l’eau</p>
-			<p class="auteur">Ecrit par : Keyla</p>
-			<svg
-				onclick="window.location.href = 'chapitre2.html';"
-				class="introchap"
-				width="72"
-				height="72"
-				viewBox="0 0 72 72"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<rect
-					width="72"
-					height="72"
-					rx="36"
-					fill="#7D9CDE"
-				/>
-				<path
-					d="M44.9656 32.8993L30.8111 25.822C28.218 24.5255 25.167 26.4111 25.167 29.3103V42.6896C25.167 45.5888 28.218 47.4745 30.8111 46.1779L44.9656 39.1007C47.5207 37.8231 47.5207 34.1768 44.9656 32.8993Z"
-					fill="#001858"
-				/>
-			</svg>
+				<div class="col-md-6">
+					<!--chapitre 4-->
+					<div class="chapitre2 float-end">
+						<h1>Chapitre 2 :</h1>
+						<p class="historique">Les Secrets sous l’eau</p>
+						<p class="auteur">Ecrit par : Keyla</p>
+						<svg
+							onclick="window.location.href = 'chapitre2.html';"
+							class="introchap"
+							width="72"
+							height="72"
+							viewBox="0 0 72 72"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect
+								width="72"
+								height="72"
+								rx="36"
+								fill="#7D9CDE"
+							/>
+							<path
+								d="M44.9656 32.8993L30.8111 25.822C28.218 24.5255 25.167 26.4111 25.167 29.3103V42.6896C25.167 45.5888 28.218 47.4745 30.8111 46.1779L44.9656 39.1007C47.5207 37.8231 47.5207 34.1768 44.9656 32.8993Z"
+								fill="#001858"
+							/>
+						</svg>
+					</div>
+				</div>
+				<!--FIN chapitre 4-->
+			</div>
 		</div>
-	</div>
+		<!--FIN Bouton suivant/pre-->
 
-
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			src="src/js/script.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
