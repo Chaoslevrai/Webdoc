@@ -61,7 +61,7 @@ body {
 	cursor: pointer;
 	animation: moveLeftRight 0.5s ease-in-out infinite alternate;
 }
-.background {
+.backgrounds {
 	
 	
 	transform: scale(55%);
