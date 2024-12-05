@@ -491,56 +491,187 @@ mark:hover {
 }
 
 /*==========================================================================================*/
-/*=================================== SECTIONS  3 ==========================================*/
+/*=================================== SECTIONS  4 ==========================================*/
 /*==========================================================================================*/
 
 #section4 {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start; /* Aligne les éléments à gauche */
-	justify-content: flex-start; /* Positionne en haut de la section */
+	align-items: flex-start; /* Aligns elements to the left */
+	justify-content: flex-start; /* Positions at the top of the section */
 	height: 100vh;
 	padding: 2rem 5%;
-	text-align: left; /* Texte aligné à gauche */
+	text-align: left; /* Left-aligned text */
 	color: white;
 	position: relative;
-	gap: 2rem; /* Espacement uniforme entre les éléments */
+	gap: 2rem; /* Uniform spacing between elements */
 }
 
-#section5 h1 {
-	font-size: clamp(20px, 3vw, 32px);
-	margin-bottom: 1rem; /* Moins d'espacement sous le titre principal */
-}
-
+/* Paragraph text in .ttext5 */
 .ttext5 p {
 	font-family: "SF UI Text", sans-serif;
-	font-size: clamp(14px, 1.5vw, 20px);
+	font-size: clamp(14px, 1.5vw, 20px); /* Responsive font size */
 	color: #ffffff;
-	max-width: 600px; /* Texte légèrement plus restreint en largeur */
-	text-align: justify; /* Texte justifié */
+	max-width: 600px; /* Limit width for readability */
+	text-align: justify; /* Justified text */
 }
 
+/* Unordered list in .ttext5 */
 .ttext5 ul {
 	font-family: "SF UI Text", sans-serif;
-	font-size: clamp(14px, 1.5vw, 20px); /* Taille du texte dans la liste */
-	color: #ffffff; /* Couleur du texte dans la liste */
-	margin: 2rem 0; /* Marge autour de la liste */
-	padding-left: 2rem; /* Décalage des puces */
+	font-size: clamp(14px, 1.5vw, 20px); /* Responsive font size */
+	color: #ffffff;
+	margin: 2rem 0;
+	padding-left: 2rem; /* Indentation of list items */
 }
 
+/* List items in .ttext5 */
 .ttext5 li {
-	margin-bottom: 1rem; /* Espacement entre les éléments de la liste */
+	margin-bottom: 1rem; /* Spacing between list items */
 }
+
+/* Image styling for .plongee */
 .plongee {
-	width: 15vw; /* Image plus petite pour équilibrer avec le texte */
+	width: 15vw; /* Smaller image for balance with text */
 	height: auto;
 	position: relative;
 	left: 50rem;
 	border-radius: 15%;
 	bottom: 10rem;
-}
-.plongee:hover {
-	transform: scale(1.1);
-	filter: drop-shadow(0 0 10px #000000);
 	transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.plongee:hover {
+	transform: scale(1.1); /* Zoom-in effect on hover */
+	filter: drop-shadow(0 0 10px #000000); /* Shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+	#section4 {
+		padding: 2rem 3%;
+	}
+	.ttext5 p {
+		font-size: clamp(
+			16px,
+			2vw,
+			22px
+		); /* Slightly larger text on medium screens */
+		max-width: 500px; /* Reduce paragraph width for medium screens */
+	}
+	.plongee {
+		width: 20vw; /* Adjust image size for medium screens */
+		left: 40rem; /* Adjust positioning */
+		bottom: 8rem; /* Adjust bottom position */
+	}
+}
+
+@media (max-width: 768px) {
+	#section4 {
+		padding: 2rem 2%;
+	}
+	.ttext5 p {
+		font-size: clamp(
+			14px,
+			2.5vw,
+			20px
+		); /* Larger text on smaller screens */
+		max-width: 100%; /* Full width for better readability */
+	}
+	.plongee {
+		width: 30vw; /* Larger image on smaller screens */
+		left: 25rem; /* Adjust positioning */
+		bottom: 5rem; /* Adjust bottom position */
+	}
+}
+
+@media (max-width: 480px) {
+	#section4 {
+		padding: 1rem 2%;
+	}
+	#section5 h1 {
+		font-size: clamp(
+			18px,
+			4vw,
+			28px
+		); /* Smaller font size for very small screens */
+	}
+	.ttext5 p {
+		font-size: clamp(
+			12px,
+			3vw,
+			18px
+		); /* Smaller font size on very small screens */
+		max-width: 100%; /* Full width */
+	}
+	.plongee {
+		width: 40vw; /* Even larger image for very small screens */
+		left: 15rem; /* Adjust positioning */
+		bottom: 2rem; /* Adjust bottom position */
+	}
+}
+/*==========================================================================================*/
+/*=================================== SECTIONS  5 ==========================================*/
+/*==========================================================================================*/
+#section5 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start; /* Aligns elements to the left */
+	justify-content: flex-start; /* Positions at the top of the section */
+	height: 100vh;
+	padding: 2rem 5%;
+	text-align: left; /* Left-aligned text */
+	color: white;
+	position: relative;
+	gap: 2rem; /* Uniform spacing between elements */
+}
+
+.text7,
+p {
+	font-family: "SF UI Text", sans-serif;
+	font-size: clamp(14px, 1.5vw, 20px); /* Responsive font size */
+	color: #ffffff;
+	max-width: 600px; /* Limit width for readability */
+}
+
+.transport {
+	width: 35vw; /* Smaller image for balance with text */
+	height: auto;
+	position: absolute;
+	left: 75%;
+	transform: translateX(-50%); /* Center the image horizontally */
+	bottom: 5rem;
+	transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+.popup {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+}
+
+.popup-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.close {
+	color: #aaa;
+	font-size: 28px;
+	font-weight: bold;
+	float: right;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
 }
